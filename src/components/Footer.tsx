@@ -14,17 +14,23 @@ export function Footer() {
       padding={5}
       bg="#09B3CD"
       color="white"
-    //   backgroundImage={Waves}
-    //   backgroundPosition="top right"
-    //   backgroundRepeat="repeat"
+      //   backgroundImage={Waves}
+      //   backgroundPosition="top right"
+      //   backgroundRepeat="repeat"
       className="ocean"
     >
       <Flex align="center" mr={5}>
-        <Image src={Logo} alt="Logo" w="150px" />
+        <Image src={Logo} alt="Logo" w={{ base: "100px", md: "150px" }} />
       </Flex>
 
-      <Text textAlign="center" fontFamily="Archivo">
-        Angellus – Cuidadores de pessoas<br/>todos os direitos reservados – {new Date().getUTCFullYear()}©
+      <Text
+        textAlign="center"
+        fontFamily="Archivo"
+        fontSize={{ base: 14, md: 16 }}
+      >
+        Angellus – Cuidadores de pessoas
+        <br />
+        todos os direitos reservados – {new Date().getUTCFullYear()}©
       </Text>
     </Flex>
   );

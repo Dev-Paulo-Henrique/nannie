@@ -17,15 +17,14 @@ export function AccordionElement() {
       bgImage={Background}
       bgRepeat="no-repeat"
       bgPosition="bottom right"
-      //   {...props}
     >
       <Box w="md" mr={{ md: 50 }} mb={{ base: 5, md: 0 }}>
         <Heading
           fontWeight="bold"
-          fontSize={45}
+          fontSize={{ base: 35, md: 45 }}
           color="#09B3CD"
           fontFamily="Archivo"
-          textAlign={{ base: "justify", md: "start" }}
+          // textAlign={{ base: "justify", md: "start" }}
         >
           TIRE TODAS AS SUAS DÚVIDAS
         </Heading>
@@ -34,6 +33,7 @@ export function AccordionElement() {
           fontFamily="Archivo"
           letterSpacing={1}
           textAlign="justify"
+          fontSize={{ base: 14, md: 20 }}
         >
           Este ao lado é o nosso F.A.Q! Nele você pode sanar todas as suas
           dúvidas sobre a Nannie e os nossos cuidados!

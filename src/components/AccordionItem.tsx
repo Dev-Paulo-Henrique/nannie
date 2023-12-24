@@ -30,7 +30,7 @@ export function AccordionItemElement({ title, firstText, bold, secondText}: Acco
               borderRadius={isExpanded ? "10px 10px 0 0" : 10}
             >
               {isExpanded ? <MinusIcon fontSize="12px" /> : <CircleIcon />}
-              <Box as="b" fontSize="22px" flex="1" textAlign="left" ml={4} fontFamily="Archivo">
+              <Box as="b" fontSize={{base: "16px", md:"22px"}} flex="1" textAlign="left" ml={4} fontFamily="Archivo">
                 {title}
               </Box>
               {isExpanded ? (

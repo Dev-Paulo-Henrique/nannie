@@ -39,18 +39,20 @@ export function Header(){
 
       <Stack
         direction={{ base: "column", md: "row" }}
-        display={{ base: isOpen ? "block" : "none", md: "flex" }}
+        display={{ base: isOpen ? "flex" : "none", md: "flex" }}
         width={{ base: "full", md: "auto" }}
-        alignItems="center"
+        // alignItems="center"
         justify="flex-end"
         mr={10}
-        gap={100}
+        gap={{base: 1 , md: 100}}
         flexGrow={1}
         mt={{ base: 4, md: 0 }}
+        // flexDirection={{ base: "row", md: "column"}}
       >
         <Link href="#" fontFamily="Archivo">Docs</Link>
         <Link href="#" fontFamily="Archivo">Examples</Link>
         <Link href="#" fontFamily="Archivo">Blog</Link>
+        <Link href="#contato" fontFamily="Archivo">Contato</Link>
       </Stack>
 
       <Box
