@@ -7,11 +7,11 @@ export function AccordionElement() {
     <Flex
       as="nav"
       align="center"
-      justify="space-between"
-      direction="row"
-      //   wrap="wrap"
-      px={100}
-      py={50}
+      justify={{ base: "center", md: "space-between" }}
+      // direction={{base: "column", md:"row"}}
+      wrap="wrap"
+      px={{ base: 5, md: 100 }}
+      py={{ base: 5, md: 50 }}
       bg="white"
       color="white"
       bgImage={Background}
@@ -19,9 +19,22 @@ export function AccordionElement() {
       bgPosition="bottom right"
       //   {...props}
     >
-      <Box w="md" pr={50}>
-        <Heading fontWeight="bold" fontSize={45} color="#09B3CD" fontFamily="Archivo">TIRE TODAS AS SUAS DÚVIDAS</Heading>
-        <Text color="gray.600" fontFamily="Archivo" letterSpacing={1} textAlign="justify">
+      <Box w="md" mr={{ md: 50 }} mb={{ base: 5, md: 0 }}>
+        <Heading
+          fontWeight="bold"
+          fontSize={45}
+          color="#09B3CD"
+          fontFamily="Archivo"
+          textAlign={{ base: "justify", md: "start" }}
+        >
+          TIRE TODAS AS SUAS DÚVIDAS
+        </Heading>
+        <Text
+          color="gray.600"
+          fontFamily="Archivo"
+          letterSpacing={1}
+          textAlign="justify"
+        >
           Este ao lado é o nosso F.A.Q! Nele você pode sanar todas as suas
           dúvidas sobre a Nannie e os nossos cuidados!
         </Text>

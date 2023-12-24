@@ -26,13 +26,12 @@ export function Form() {
       align="center"
       justify="center"
       direction="column"
-      px={100}
-      py={50}
+      px={{ base: 5, md: 100 }}
+      py={{ base: 5, md: 50 }}
       bg="white"
-      color="white"
     >
         <Heading color="#09B3CD" fontWeight={600} mb={5}>Contato</Heading>
-      <Box w="xl" border="2px solid #09B3CD" p={5} borderRadius="md">
+      <Box w={{base: "sm", md:"xl"}} border="2px solid #09B3CD" p={5} borderRadius="md">
         <form onSubmit={formik.handleSubmit}>
           <FormControl isRequired>
             <FormLabel
