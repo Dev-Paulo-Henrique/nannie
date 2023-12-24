@@ -3,9 +3,6 @@ import { Flex, Text, Image } from "@chakra-ui/react";
 interface ImageProps {
   src: string;
   text: string;
-
-  eventDistance: string;
-  eventImage?: File;
 }
 
 export function Images({ src, text }:ImageProps) {

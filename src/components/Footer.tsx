@@ -1,4 +1,4 @@
-import { Flex, Text, Image, Box } from "@chakra-ui/react";
+import { Flex, Text, Image } from "@chakra-ui/react";
 import Logo from "../assets/logo-footer.png";
 // import Waves from "../assets/waves.png"
 // import "./Waves.css"
@@ -18,7 +18,6 @@ export function Footer() {
     //   backgroundPosition="top right"
     //   backgroundRepeat="repeat"
       className="ocean"
-      //   {...props}
     >
       <Flex align="center" mr={5}>
         <Image src={Logo} alt="Logo" w="150px" />
