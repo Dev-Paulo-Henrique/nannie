@@ -6,13 +6,15 @@ import {
   Wrap,
   Center,
   Button,
-  Image
+  Image,
+  useBreakpoint,
 } from "@chakra-ui/react";
 import Waves from "../assets/svg/waves.svg";
+import Agent from "../assets/enfermeira_angellus_rec-min-1024x733.jpg";
 import { Item } from "./Wrap";
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export function Consultation() {
+  const breakpoint = useBreakpoint({ ssr: false });
   return (
     <>
       <Flex
@@ -35,7 +37,7 @@ export function Consultation() {
             color="gray.600"
             fontFamily="Archivo"
             letterSpacing={1}
-            textAlign="justify"
+            textAlign={{ base: "center", md: "start" }}
             fontSize={{ base: 18, md: 24 }}
           >
             Te acompanhamos nas
@@ -46,13 +48,18 @@ export function Consultation() {
             color="#09B3CD"
             fontFamily="Archivo"
             mt={-3}
-            // textAlign={{ base: "justify", md: "start" }}
+            textAlign={{ base: "center", md: "start" }}
           >
             Consultas <br />{" "}
             <Text color="gray.600" fontSize={{ base: 40, md: 70 }} mt={-5}>
               e Exames
             </Text>
           </Heading>
+          {breakpoint == "base" && (
+            <Center>
+              <Image src={Agent} className="agent" flex={1} w={100} />
+            </Center>
+          )}
           <Wrap mt={4} justify="space-between">
             <Item text="Exames de Rotina" />
             <Item text="Hemograma" />
@@ -69,7 +76,7 @@ export function Consultation() {
               mt={2}
               variant="outline"
               fontFamily="Archivo"
-              bg="#0793A8"
+              bg="#09B3CD"
               colorScheme="#0793A8"
               _hover={{ bg: "#0793A8", borderColor: "#0793A8" }}
               w={200}
@@ -79,8 +86,11 @@ export function Consultation() {
             </Button>
           </Center>
         </Box>
+        {breakpoint !== "base" && (
+          <Image src={Agent} className="agent" flex={1} w={200} />
+        )}
       </Flex>
-      <Image src={Waves}/>
+      <Image src={Waves} />
     </>
   );
 }
