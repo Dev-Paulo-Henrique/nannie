@@ -15,7 +15,6 @@ import { Item } from "./Wrap";
 
 export function Consultation() {
   const breakpoint = useBreakpoint({ ssr: false });
-  console.log(breakpoint)
   return (
     <>
       <Flex
@@ -58,7 +57,7 @@ export function Consultation() {
           </Heading>
           {breakpoint == "base" && (
             <Center>
-              <Image src={Agent} className="agent" w="100%" h="100%" />
+              <Image src={Agent} className="agent" w={300} />
             </Center>
           )}
           <Wrap mt={4} justify="space-between">
@@ -75,7 +74,7 @@ export function Consultation() {
           <Center>
             <Button
               mt={2}
-              variant="outline"
+              // variant="outline"
               fontFamily="Archivo"
               bg="#09B3CD"
               colorScheme="#0793A8"
@@ -87,8 +86,8 @@ export function Consultation() {
             </Button>
           </Center>
         </Box>
-        {breakpoint == "md" && (
-          <Image src={Agent} className="agent" w="50%" />
+        {breakpoint !== "base" && (
+          <Image src={Agent} className="agent" w={500} />
         )}
       </Flex>
       <Image src={Waves} />
