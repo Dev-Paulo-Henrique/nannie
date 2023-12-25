@@ -1,7 +1,6 @@
 import { Flex, Text, Image } from "@chakra-ui/react";
 import Logo from "../assets/logo-footer.png";
-// import Waves from "../assets/waves.png"
-// import "./Waves.css"
+import Wave from "../assets/svg/wave.svg";
 
 export function Footer() {
   return (
@@ -12,11 +11,10 @@ export function Footer() {
       direction="column"
       wrap="wrap"
       padding={5}
-      bg="#09B3CD"
       color="white"
-      //   backgroundImage={Waves}
-      //   backgroundPosition="top right"
-      //   backgroundRepeat="repeat"
+      backgroundImage={Wave}
+      backgroundPosition="bottom"
+      backgroundRepeat="no-repeat"
       className="ocean"
     >
       <Flex align="center" mr={5}>
@@ -27,6 +25,7 @@ export function Footer() {
         textAlign="center"
         fontFamily="Archivo"
         fontSize={{ base: 14, md: 16 }}
+        color="gray.500"
       >
         Angellus – Cuidadores de pessoas
         <br />

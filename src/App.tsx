@@ -6,6 +6,7 @@ import { Header } from "./components/Header.tsx";
 import { Footer } from "./components/Footer.tsx";
 import { FloatingButton } from "./components/FloatingButton.tsx";
 import { Load } from "./components/Load.tsx";
+import { Consultation } from "./components/Consultation.tsx";
 
 function App() {
   const [isLoad, setIsLoad] = useState(false);
@@ -21,6 +22,7 @@ function App() {
         <>
           <Header />
           {/* <Aside1 /> */}
+          <Consultation />
           <Accordion />
           <Form/>
           <Footer />
