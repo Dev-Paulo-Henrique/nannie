@@ -56,7 +56,7 @@ export function Consultation() {
               e Exames
             </Text>
           </Heading>
-          {breakpoint == "base" || breakpoint == "sm" && (
+          {breakpoint == "base" && (
             <Center>
               <Image src={Agent} className="agent" w="100%" h="100%" />
             </Center>
@@ -87,7 +87,7 @@ export function Consultation() {
             </Button>
           </Center>
         </Box>
-        {breakpoint == "md" || breakpoint == "lg" && (
+        {breakpoint == "md" && (
           <Image src={Agent} className="agent" w="50%" />
         )}
       </Flex>
