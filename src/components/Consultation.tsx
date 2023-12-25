@@ -57,7 +57,7 @@ export function Consultation() {
           </Heading>
           {breakpoint == "base" && (
             <Center>
-              <Image src={Agent} className="agent" w={300} />
+              <Image src={Agent} className="agent" w={100}/>
             </Center>
           )}
           <Wrap mt={4} justify="space-between">
@@ -87,7 +87,7 @@ export function Consultation() {
           </Center>
         </Box>
         {breakpoint !== "base" && (
-          <Image src={Agent} className="agent" w={500} />
+          <Image src={Agent} className="agent" w={600} />
         )}
       </Flex>
       <Image src={Waves} />
