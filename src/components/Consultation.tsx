@@ -57,7 +57,7 @@ export function Consultation() {
           </Heading>
           {breakpoint == "base" && (
             <Center>
-              <Image src={Agent} className="agent" w="70%"/>
+              <Image src={Agent} className="agent" maxW="100%"/>
             </Center>
           )}
           <Wrap mt={4} justify="space-between">
