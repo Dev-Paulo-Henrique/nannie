@@ -56,7 +56,7 @@ export function Consultation() {
             </Text>
           </Heading>
           {breakpoint == "base" && (
-            <Center>
+            <Center my={2}>
               <Image src={Agent} className="agent" w="100%"/>
             </Center>
           )}
@@ -87,7 +87,7 @@ export function Consultation() {
           </Center>
         </Box>
         {breakpoint !== "base" && (
-          <Image src={Agent} className="agent" w={600} />
+          <Image src={Agent} className="agent" w="50%" />
         )}
       </Flex>
       <Image src={Waves} />
