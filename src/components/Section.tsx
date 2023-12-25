@@ -81,7 +81,7 @@ export function Section() {
               w={200}
               h={50}
             >
-              Contate agora!
+              Contrate agora!
             </Button>
           </Center>
         </Box>
