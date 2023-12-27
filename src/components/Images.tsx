@@ -10,12 +10,12 @@ export function Images({ src, text }:ImageProps) {
     <Flex direction="column" alignItems="center">
       <Image
         src={src}
-        objectFit="cover"
-        borderRadius="150px"
+        objectFit={{base: "contain", md: "cover"}}
+        borderRadius={{base: "25px",md: "150px"}}
         w="100%"
-        h={400}
+        h={{base: "auto", md: 400}}
       />
-      <Text as="b" fontSize={26}>
+      <Text as="b" color="#09B3CD" fontSize={{base: 16, md: 26}}>
         {text}
       </Text>
     </Flex>

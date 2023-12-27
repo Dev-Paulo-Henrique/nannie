@@ -49,9 +49,9 @@ export function Header(){
         mt={{ base: 4, md: 0 }}
         // flexDirection={{ base: "row", md: "column"}}
       >
-        <Link href="#" fontFamily="Archivo">Docs</Link>
-        <Link href="#" fontFamily="Archivo">Examples</Link>
+        <Link href="#" fontFamily="Archivo">Home</Link>
         <Link href="#" fontFamily="Archivo">Blog</Link>
+        <Link href="#" fontFamily="Archivo">Dúvidas</Link>
         <Link href="#contato" fontFamily="Archivo">Contato</Link>
       </Stack>
 

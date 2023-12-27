@@ -1,5 +1,4 @@
 import { useState } from "react";
-// import { Aside1 } from "./Aside1";
 import { Form } from "./components/Form.tsx";
 import { AccordionElement as Accordion } from "./components/Accordion.tsx";
 import { Header } from "./components/Header.tsx";
@@ -10,6 +9,7 @@ import { Consultation } from "./components/Consultation.tsx";
 import { Section } from "./components/Section.tsx";
 import { Partners } from "./components/Partners.tsx";
 import { Care } from "./components/Care.tsx";
+import { Main } from "./components/Main.tsx";
 
 function App() {
   const [isLoad, setIsLoad] = useState(true);
@@ -24,9 +24,9 @@ function App() {
       ) : (
         <>
           <Header />
+          <Main />
           <Care />
           <Partners />
-          {/* <Aside1 /> */}
           <Section />
           <Consultation />
           <Accordion />
