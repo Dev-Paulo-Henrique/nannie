@@ -9,6 +9,7 @@ import { Load } from "./components/Load.tsx";
 import { Consultation } from "./components/Consultation.tsx";
 import { Section } from "./components/Section.tsx";
 import { Partners } from "./components/Partners.tsx";
+import { Care } from "./components/Care.tsx";
 
 function App() {
   const [isLoad, setIsLoad] = useState(true);
@@ -23,12 +24,13 @@ function App() {
       ) : (
         <>
           <Header />
-          <Partners/>
+          <Care />
+          <Partners />
           {/* <Aside1 /> */}
           <Section />
           <Consultation />
           <Accordion />
-          <Form/>
+          <Form />
           <Footer />
           <FloatingButton />
         </>

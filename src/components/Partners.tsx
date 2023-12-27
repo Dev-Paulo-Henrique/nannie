@@ -60,7 +60,7 @@ export function Partners() {
         py={{ base: 5, md: 50 }}
         bg="white"
         color="white"
-        bgGradient="linear(to-b, white, rgb(8,178,204, 0.15))"
+        // bgGradient="linear(to-b, white, rgb(8,178,204, 0.15))"
       >
         <Box w="md" mb={{ base: 5, md: 0 }}>
           <Text
