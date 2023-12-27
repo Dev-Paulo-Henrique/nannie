@@ -3,11 +3,9 @@ import {
   Heading,
   Text,
   Box,
-  Wrap,
-  Center,
   Button,
   Image,
-  useBreakpoint,
+//   useBreakpoint,
   // useBreakpointValue,
 } from "@chakra-ui/react";
 import Heart from "../assets/svg/heart.svg";
@@ -18,7 +16,7 @@ export function Card() {
   //   base: false,
   //   lg: true
   // })
-  const breakpoint = useBreakpoint({ ssr: false });
+//   const breakpoint = useBreakpoint({ ssr: false });
   return (
     <>
       <Flex

@@ -10,11 +10,11 @@ import {
   Button,
   // useBreakpointValue,
 } from "@chakra-ui/react";
-import Waves from "../assets/svg/waves.svg";
+// import Waves from "../assets/svg/waves.svg";
 import Nivel from "../assets/svg/nivel.svg";
 import Heart from "../assets/svg/heart.svg";
 import Cuidador from "../assets/cuidador_angellus-min-1.jpg";
-import Agent from "../assets/enfermeira_angellus_rec-min-1024x733.jpg";
+// import Agent from "../assets/enfermeira_angellus_rec-min-1024x733.jpg";
 import { Item } from "./Wrap";
 import { Card } from "./Card";
 
