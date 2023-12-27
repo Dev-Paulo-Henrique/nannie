@@ -7,15 +7,21 @@ import {
   Button,
   Image,
   useBreakpoint,
+  // useBreakpointValue,
 } from "@chakra-ui/react";
 import PCD from "../assets/cuidador_pcd_angellus-min.jpg";
+// import XXX from "../assets/xxx-min.png";
 
 export function Section() {
+  // const isWideVersion = useBreakpointValue({
+  //   base: false,
+  //   lg: true
+  // })
   const breakpoint = useBreakpoint({ ssr: false });
   return (
     <>
       <Flex
-        as="nav"
+        as="section"
         align="center"
         justify={{ base: "center", md: "space-between" }}
         // direction={{base: "column", md:"row"}}
@@ -25,6 +31,7 @@ export function Section() {
         bg="white"
         color="white"
       >
+        {/* <Image src={XXX} w={16} position="absolute"  /> */}
         {breakpoint !== "base" && <Image src={PCD} className="pcd" w="50%" />}
         <Box w="md" mr={{ md: 50 }} mb={{ base: 5, md: 0 }}>
           <Text

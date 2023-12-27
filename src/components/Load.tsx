@@ -4,7 +4,7 @@ import LoadImage from "../assets/load.png";
 export function Load() {
   return (
     <Flex direction="column" alignItems="center" justify="center" h="100vh">
-      <Image src={LoadImage} w="xl" className="animate__animated animate__fadeIn"/>
+      <Image src={LoadImage} w="lg" className="animate__animated animate__fadeIn"/>
     </Flex>
   );
 }

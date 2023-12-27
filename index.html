@@ -16,8 +16,12 @@
       integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK"
       crossorigin="anonymous"
     />
-    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/preset-stars@3.0.0/tsparticles.preset.stars.bundle.min.js"></script>
     <style>
+      * {
+        overflow-x: hidden;
+      }
       .agent {
         -webkit-mask-image: url("./src/assets/svg/mask.svg");
         mask-image: url("./src/assets/svg/mask.svg");
@@ -34,11 +38,31 @@
         mask-size: contain;
         mask-position: center center;
       }
+      
+      @keyframes animation-name {
+        0% {
+          transform: translateX(5%);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
     </style>
     <title>Nannie</title>
   </head>
   <body>
+    <!-- <div id="tsparticles"></div> -->
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <!-- <script type="text/javascript">
+      (async () => {
+        await loadStarsPreset(tsParticles);
+
+        await tsParticles.load({
+          id: "tsparticles",
+          options: { preset: "stars" },
+        });
+      })();
+    </script> -->
   </body>
 </html>

@@ -8,17 +8,22 @@ import {
   Button,
   Image,
   useBreakpoint,
+  // useBreakpointValue,
 } from "@chakra-ui/react";
 import Waves from "../assets/svg/waves.svg";
 import Agent from "../assets/enfermeira_angellus_rec-min-1024x733.jpg";
 import { Item } from "./Wrap";
 
 export function Consultation() {
+  // const isWideVersion = useBreakpointValue({
+  //   base: false,
+  //   lg: true
+  // })
   const breakpoint = useBreakpoint({ ssr: false });
   return (
     <>
       <Flex
-        as="nav"
+        as="section"
         align="center"
         justify={{ base: "center", md: "space-between" }}
         // direction={{base: "column", md:"row"}}

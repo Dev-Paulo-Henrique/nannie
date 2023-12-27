@@ -5,7 +5,7 @@ import Background from "../assets/waves.png";
 export function AccordionElement() {
   return (
     <Flex
-      as="nav"
+      as="section"
       align="center"
       justify={{ base: "center", md: "space-between" }}
       // direction={{base: "column", md:"row"}}

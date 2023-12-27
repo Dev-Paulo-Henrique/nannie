@@ -22,7 +22,7 @@ export function Form() {
   });
   return (
     <Flex
-      as="nav"
+      as="section"
       align="center"
       justify="center"
       direction="column"

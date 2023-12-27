@@ -5,7 +5,7 @@ import Wave from "../assets/svg/wave.svg";
 export function Footer() {
   return (
     <Flex
-      as="nav"
+      as="footer"
       align="center"
       justify="center"
       direction="column"
