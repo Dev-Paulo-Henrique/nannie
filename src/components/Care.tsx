@@ -10,7 +10,7 @@ import {
   Button,
   // useBreakpointValue,
 } from "@chakra-ui/react";
-// import Waves from "../assets/svg/waves.svg";
+import Waves from "../assets/svg/waves.svg";
 import Nivel from "../assets/svg/nivel.svg";
 import Heart from "../assets/svg/heart.svg";
 import Cuidador from "../assets/cuidador_angellus-min-1.jpg";
@@ -26,7 +26,7 @@ export function Care() {
   const breakpoint = useBreakpoint({ ssr: false });
   return (
     <>
-      {/* <Image src={Waves} transform="rotate(180deg)" /> */}
+      <Image src={Waves} transform="rotate(180deg)" />
       <Flex
         as="section"
         align="center"
