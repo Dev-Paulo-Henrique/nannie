@@ -11,14 +11,14 @@ import { Section } from "./components/Section.tsx";
 import { Partners } from "./components/Partners.tsx";
 
 function App() {
-  const [isLoad, setIsLoad] = useState(false);
+  const [isLoad, setIsLoad] = useState(true);
   setTimeout(() => {
-    setIsLoad(true);
+    setIsLoad(false);
   }, 2000);
 
   return (
     <>
-      {!isLoad ? (
+      {isLoad ? (
         <Load />
       ) : (
         <>
