@@ -1,10 +1,11 @@
 import { Grid, Flex, Box, Text, Heading } from "@chakra-ui/react";
-import Photo1 from "../assets/angellus_idosos-min.jpg";
-import Photo2 from "../assets/angellus_pos_operatorio-min.jpg";
-import Photo3 from "../assets/cuidadorespcdrecife-min.jpg";
+import Photo1 from "../assets/Transformacao-digital-na-area-da-saude.webp";
+import Photo2 from "../assets/como-atender-na-telemedicina-telemedicina-morsch.webp";
 import { Images } from "./Images";
 
+
 export function Main() {
+
   return (
     <>
       <Flex
@@ -17,30 +18,18 @@ export function Main() {
         py={{ base: 5, md: 50 }}
         bg="white"
         color="white"
+        id="home"
       >
-        <Box w="md" pr={{ md: 50 }} mb={{ base: 5, md: 0 }}>
+        <Box w="md" pr={{ md: 50 }} mb={{ base: 5, md: 0 }} flex={{ md: 1 }}>
           <Heading
             fontWeight="bold"
-            fontSize={{ base: 40, md: 80 }}
+            fontSize={{ base: 30, md: 55 }}
             color="#09B3CD"
             fontFamily="Archivo"
-            // textAlign={{ base: "justify", md: "start" }}
-          >
-            Cuidando de você
-          </Heading>
-          <Text
-            as="b"
-            color="gray.600"
-            fontFamily="Archivo"
-            letterSpacing={1}
-            mt={-2}
             textAlign={{ base: "center", md: "start" }}
-            fontSize={{ base: 18, md: 24 }}
-            display="flex"
-            flexDirection="row"
           >
-            com empatia e amor!
-          </Text>
+            Estratégia e cuidado digital
+          </Heading>
           <Text
             color="gray.600"
             fontFamily="Archivo"
@@ -48,17 +37,26 @@ export function Main() {
             textAlign="justify"
             fontSize={{ base: 14, md: 18 }}
           >
-            Buscamos diariamente transformar vidas e realidade de maneira humana
-            e empática, a Nannie nasceu do Amor e nossa maior missão e
-            propósito é provar que através de cuidados e profissionalismo é
-            possível vencer qualquer adversidade.
+            A Nannie é uma empresa de saúde digital (Health Tech) que desenvolve
+            e oferta soluções para personalizar e agilizar o cuidado em saúde.
+            <br />
+            <br />
+            Buscamos os melhores desfechos clínicos e a melhor experiência para
+            o paciente, profissionais e serviços de saúde.
           </Text>
         </Box>
-      <Grid templateColumns="repeat(3, 1fr)" gap={4} flex={1}>
-        <Images src={Photo1} text="Idosos" />
-        <Images src={Photo2} text="Pós-operatório" />
-        <Images src={Photo3} text="PCDs" />
-      </Grid>
+        <Grid templateColumns="repeat(2, 1fr)" gap={4} flex={1}>
+          <Images
+            src={Photo1}
+            title="Nannie é tecnologia"
+            text="Consultoria estratégica em saúde digital  para melhorar a performance do seu negócio"
+          />
+          <Images
+            src={Photo2}
+            title="Nannie é saúde"
+            text="Atendimento médico e de enfermagem online e domiciliar. Agende e nós vamos até você!"
+          />
+        </Grid>
       </Flex>
     </>
   );

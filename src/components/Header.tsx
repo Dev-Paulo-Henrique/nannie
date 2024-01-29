@@ -3,7 +3,7 @@ import {
   Stack,
   Flex,
   Link,
-  Button,
+  // Button,
   useDisclosure,
   Image
 } from "@chakra-ui/react";
@@ -25,6 +25,7 @@ export function Header(){
       bg="#09B3CD"
       color="white"
       // position="fixed"
+      // zIndex={999}
       w="100%"
       // h="100px"
       // {...props}
@@ -49,13 +50,13 @@ export function Header(){
         mt={{ base: 4, md: 0 }}
         // flexDirection={{ base: "row", md: "column"}}
       >
-        <Link href="#" fontFamily="Archivo">Home</Link>
-        <Link href="#" fontFamily="Archivo">Blog</Link>
-        <Link href="#" fontFamily="Archivo">Dúvidas</Link>
+        <Link href="#home" fontFamily="Archivo">Início</Link>
+        {/* <Link href="#" fontFamily="Archivo">Blog</Link>
+        <Link href="#" fontFamily="Archivo">Dúvidas</Link> */}
         <Link href="#contato" fontFamily="Archivo">Contato</Link>
       </Stack>
 
-      <Box
+      {/* <Box
         display={{ base: isOpen ? "block" : "none", md: "block" }}
         mt={{ base: 4, md: 0 }}
       >
@@ -67,7 +68,7 @@ export function Header(){
         >
           Criar conta
         </Button>
-      </Box>
+      </Box> */}
     </Flex>
   );
 }

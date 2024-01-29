@@ -6,20 +6,39 @@ import {
   Input,
   Button,
   Box,
-  Heading
+  Heading,
 } from "@chakra-ui/react";
 import { useFormik } from "formik";
+// import Geonames from "geonames.js";
 
 export function Form() {
   const formik = useFormik({
     initialValues: {
       name: "",
+      local: "",
       option: "",
     },
     onSubmit: (values) => {
       alert(JSON.stringify(values, null, 2));
     },
   });
+
+  // const geonames = Geonames({
+  //   username: "myusername",
+  //   lan: "pt",
+  //   encoding: "JSON",
+  // });
+
+  // const country: string[] = [];
+
+  // geonames
+  //   .search({ q: "CONT" })
+  //   .then((resp) => {
+  //     country.push(...resp.geonames);
+  //     console.log(country);
+  //   })
+  //   .catch((err) => console.error(err));
+
   return (
     <Flex
       as="section"
@@ -31,8 +50,15 @@ export function Form() {
       bg="white"
       id="contato"
     >
-        <Heading color="#09B3CD" fontWeight={600} mb={5}>Contato</Heading>
-      <Box w={{base: "2sm", md:"xl"}} border="2px solid #09B3CD" p={5} borderRadius="md">
+      <Heading color="#09B3CD" fontWeight={600} mb={5} overflowY="hidden">
+        Contato
+      </Heading>
+      <Box
+        w={{ base: "2sm", md: "xl" }}
+        border="2px solid #09B3CD"
+        p={5}
+        borderRadius="md"
+      >
         <form onSubmit={formik.handleSubmit}>
           <FormControl isRequired>
             <FormLabel
@@ -53,8 +79,31 @@ export function Form() {
             />
           </FormControl>
           <FormControl isRequired>
+            <FormLabel
+              color="#09B3CD"
+              fontWeight="regular"
+              fontSize={20}
+              htmlFor="local"
+            >
+              De onde você é?
+            </FormLabel>
+            <Select
+              placeholder="Selecione uma opção"
+              color="gray.500"
+              id="local"
+              name="local"
+              onChange={formik.handleChange}
+              value={formik.values.local}
+            >
+              <option>Brasil</option>
+              <option>EUA</option>
+              <option>Canadá</option>
+              <option>Portugal</option>
+            </Select>
+          </FormControl>
+          <FormControl isRequired>
             <FormLabel color="#09B3CD" fontWeight="regular" fontSize={20}>
-              Como vamos te ajudar?
+              Como podemos te ajudar?
             </FormLabel>
             <Select
               placeholder="Selecione uma opção"

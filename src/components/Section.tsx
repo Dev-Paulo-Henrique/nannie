@@ -9,7 +9,7 @@ import {
   useBreakpoint,
   // useBreakpointValue,
 } from "@chakra-ui/react";
-import PCD from "../assets/cuidador_pcd_angellus-min.jpg";
+import PCD from "../assets/treinamento.jpg";
 // import XXX from "../assets/xxx-min.png";
 
 export function Section() {
@@ -44,18 +44,18 @@ export function Section() {
             bg="gray.600"
             p={2}
           >
-            Crianças e adultos
+            Saúde Digital
           </Text>
           <Box borderBottomColor="gray.600" borderBottomWidth={1}></Box>
           <Heading
             fontWeight="bold"
-            fontSize={{ base: 30, md: 70 }}
+            fontSize={{ base: 30, md: 60 }}
             color="#09B3CD"
             fontFamily="Archivo"
             my={2}
             // textAlign={{ base: "center", md: "start" }}
           >
-            PCD
+            MAIS QUE TECNOLOGIA
           </Heading>
           <Text
             color="gray.600"
@@ -67,10 +67,12 @@ export function Section() {
             pl={6}
             borderLeftColor="#09B3CD"
           >
-            A Nannie está preparada para auxiliar aqueles que , no momento,
-            devido algum acidente ou condição existente, tenham alguma limitação
-            física e queiram recuperar autonomia e desenvolver suas atividades
-            diarias!
+            A Nannie cuida do seu negócio. Incorporar as melhores práticas em
+            saúde digital é fundamental para entregar soluções digitais que
+            melhorarem a experiência do seu cliente e a performance da sua
+            indústria ou serviço de saúde. Ofertamos consultoria estratégica
+            para apoiar a transformação digital, conteúdos, palestras e cursos
+            personalizados para gestores, profissionais de saúde e pacientes.
           </Text>
           {breakpoint == "base" && (
             <Center my={2}>
@@ -87,6 +89,7 @@ export function Section() {
               _hover={{ bg: "#0793A8", borderColor: "#0793A8" }}
               w={200}
               h={50}
+              isDisabled
             >
               Contrate agora!
             </Button>

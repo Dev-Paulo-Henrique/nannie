@@ -27,7 +27,7 @@ export function Footer() {
         fontSize={{ base: 14, md: 16 }}
         color="gray.500"
       >
-        Angellus – Cuidadores de pessoas
+        Healthtech - Tecnologias Digitais na Saúde – Saúde Digital
         <br />
         todos os direitos reservados – {new Date().getUTCFullYear()}©
       </Text>

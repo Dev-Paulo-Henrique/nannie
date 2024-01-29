@@ -12,8 +12,8 @@ import {
 } from "@chakra-ui/react";
 import Waves from "../assets/svg/waves.svg";
 import Nivel from "../assets/svg/nivel.svg";
-import Heart from "../assets/svg/heart.svg";
-import Cuidador from "../assets/cuidador_angellus-min-1.jpg";
+// import Heart from "../assets/svg/heart.svg";
+import Cuidador from "../assets/doutuora.jpg";
 // import Agent from "../assets/enfermeira_angellus_rec-min-1024x733.jpg";
 import { Item } from "./Wrap";
 import { Card } from "./Card";
@@ -41,14 +41,14 @@ export function Care() {
         //   bgRepeat="no-repeat"
         //   bgPosition="bottom right"
       >
-        <Box w="md" mb={{ base: 5, md: 0 }}>
+        <Box w="md" mb={{ base: 5, md: 0 }} maxW="40%">
           <Heading
             fontWeight="bold"
-            fontSize={{ base: 35, md: 80 }}
+            fontSize={{ base: 30, md: 55 }}
             color="#09B3CD"
             fontFamily="Archivo"
             // mt={-3}
-            // textAlign={{ base: "center", md: "start" }}
+            textAlign={{ base: "center", md: "start" }}
           >
             MAIS QUE CUIDADOS
           </Heading>
@@ -59,11 +59,11 @@ export function Care() {
             letterSpacing={1}
             mt={-2}
             textAlign={{ base: "center", md: "start" }}
-            fontSize={{ base: 18, md: 24 }}
+            fontSize={{ base: 14, md: 28 }}
             display="flex"
             flexDirection="row"
           >
-            COMPROMISSO E SERIEDADE <Image src={Heart} w={6} ml={2} />
+            CONFORTO E ATENDIMENTO PERSONALIZADO
           </Text>
           <Text
             color="gray.600"
@@ -74,50 +74,59 @@ export function Care() {
             my={4}
             maxW={400}
           >
-            Contratar um Cuidador Pessoal para o vô, para a vó, mãe , pai ou
-            parentes é assegurar um serviço qualificado e todo compromisso
-            necessário…{" "}
+            Agende uma teleconsulta com nossos médicos e enfermeiros. Mas se
+            preferir nossa equipe vai até você, no conforto do seu lar. Nosso
+            foco é manter sua saúde e qualidade de vida.{" "}
           </Text>
           <Wrap justify="space-between">
-            <Item text="Cuidados Higiênicos" />
-            <Item text="Rotina de Medicação" />
-            <Item text="Alimentação" />
-            <Item text="Passeios" />
-            <Item text="Sociointerativo" />
-            <Item text="Atividades Lúdicas" />
+            <Item text=" Consultas médicas para avaliação e monitoramento clínico" />
+            <Item text="Apoio para seguimento de planos de cuidado prescritos por seu médico" />
+            <Item text="Visitas médica e de enfermagem para pacientes idosos independentes, doentes crônicos" />
+            <Item text="Orientação para o paciente, cuidadores e familiares sobre cuidados básicos e medicamentos" />
           </Wrap>
           {breakpoint == "base" && (
-            <Center my={2} display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-                <Image src={Cuidador} rounded="100%" maxW={{base: 300, md: 250}} my={4}/>
+            <Center
+              my={2}
+              display="flex"
+              flexDirection="column"
+              justifyContent="center"
+              alignItems="center"
+            >
+              <Image
+                src={Cuidador}
+                rounded="100%"
+                maxW={{ base: 300, md: 250 }}
+                my={4}
+              />
 
-                <Heading
-                  color="#09B3CD"
-                  overflow="hidden"
-                  fontSize={{ base: 22, md: 36 }}
-                >
-                  Cuidadores Pessoais Disponíveis
-                </Heading>
-                <Text
-                  color="gray.600"
-                  fontSize={{ base: 12, md: 16 }}
-                  my={2}
-                  fontWeight="bold"
-                  // maxW={300}
-                >
-                  Clique no botão abaixo e solicite agora um cuidador home care.
-                </Text>
-                <Button
-                  mt={2}
-                  // variant="outline"
-                  fontFamily="Archivo"
-                  bg="#09B3CD"
-                  colorScheme="#0793A8"
-                  _hover={{ bg: "#0793A8", borderColor: "#0793A8" }}
-                  w={200}
-                  h={50}
-                >
-                  Solicitar agora!
-                </Button>
+              <Heading
+                color="#09B3CD"
+                overflow="hidden"
+                fontSize={{ base: 22, md: 36 }}
+              >
+                Conheça nossa equipe médica
+              </Heading>
+              <Text
+                color="gray.600"
+                fontSize={{ base: 12, md: 16 }}
+                my={2}
+                fontWeight="bold"
+                // maxW={300}
+              >
+                Clique e agende um atendimento
+              </Text>
+              <Button
+                mt={2}
+                // variant="outline"
+                fontFamily="Archivo"
+                bg="#09B3CD"
+                colorScheme="#0793A8"
+                _hover={{ bg: "#0793A8", borderColor: "#0793A8" }}
+                w={200}
+                h={50}
+              >
+                Solicitar agora!
+              </Button>
             </Center>
           )}
         </Box>

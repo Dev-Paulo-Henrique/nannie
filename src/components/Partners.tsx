@@ -10,14 +10,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { SliderItem } from "./Slick";
-import Medortopedista from "../assets/medortopedista-min.png";
-import Terapeuta from "../assets/terapeuta_ocupacional-min.png";
-import Cuidadores from "../assets/cuidadores_recife_pe-min.jpg";
-import Enfermeira from "../assets/enf2-min.png";
-import Supervisora from "../assets/enfermeira_angellus-min.png";
-import Fisioterapeuta from "../assets/ortopedista_angellusrecife-min.jpg";
-import Nutricionista from "../assets/angellus_nutricionista_recife-min.jpg";
-import Educador from "../assets/educadorfisico_angellus-min.jpg";
+import TiSaude from "../assets/logo_ti-saude.png";
+import Fecomercio from "../assets/logo_fecomercio.png";
+import DPSP from "../assets/logo_dpsp.png";
+import Interne from "../assets/logo_interne.png";
 
 export function Partners() {
   const isWideVersion = useBreakpointValue({
@@ -28,12 +24,16 @@ export function Partners() {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 2000,
-    slidesToShow: 3,
+    speed: 4000,
+    lazyLoad: true,
+    autoplaySpeed: 2000,
+    slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
     centerMode: false,
-    arrows: true,
+    arrows: false,
+    cssEase: "linear",
+    variableWidth: true
     // centerPadding: '60px',
   };
 
@@ -45,7 +45,9 @@ export function Partners() {
     slidesToScroll: 1,
     autoplay: true,
     centerMode: false,
-    arrows: true,
+    arrows: false,
+    autoplaySpeed: 2000,
+    cssEase: "linear"
     // centerPadding: '120px',
   };
   return (
@@ -58,11 +60,12 @@ export function Partners() {
         wrap="wrap"
         px={{ base: 5, md: 100 }}
         py={{ base: 5, md: 50 }}
-        bg="white"
+        // bg="white"
         color="white"
-        // bgGradient="linear(to-b, white, rgb(8,178,204, 0.15))"
+        mt={10}
+        bgGradient="linear(to-b, white, rgb(8,178,204, 0.15))"
       >
-        <Box w="md" mb={{ base: 5, md: 0 }}>
+        <Box w="md" mb={{ base: 5, md: 0 }} flex={{ md: 1 }}>
           <Text
             color="gray.600"
             fontFamily="Archivo"
@@ -70,7 +73,7 @@ export function Partners() {
             // textAlign={{ base: "center", md: "start" }}
             fontSize={{ base: 18, md: 24 }}
           >
-            Profissionais
+            Clientes e
           </Text>
           <Heading
             fontWeight="bold"
@@ -98,37 +101,23 @@ export function Partners() {
             mt={6}
             maxW={400}
           >
-            Profissionais especializados prontos para te atender!
+            Conheça quem já conheceu a Nannie
           </Text>
         </Box>
         <Flex flex={1}>
           {isWideVersion ? (
             <Slider {...settings}>
-              <SliderItem src={Medortopedista} text="Médico Ortopedista" />
-              <SliderItem src={Terapeuta} text="Terapeuta Ocupacional" />
-              <SliderItem src={Cuidadores} text="Cuidadores Pessoais" />
-              <SliderItem
-                src={Enfermeira}
-                text="Enfermeira (cuidados paliativos e assistência domiciliar)"
-              />
-              <SliderItem src={Supervisora} text="Enfermeira Supervisora" />
-              <SliderItem src={Fisioterapeuta} text="Fisioterapeuta" />
-              <SliderItem src={Nutricionista} text="Nutricionista" />
-              <SliderItem src={Educador} text="Educador físico" />
+              <SliderItem src={TiSaude} link="https://www.tisaude.com" text="TiSaude" />
+              <SliderItem src={Fecomercio} link="https://www.fecomercio-ce.com.br" text="Fecomércio-CE" />
+              <SliderItem src={DPSP} link="https://www.grupodpsp.com.br" text="DPSP" />
+              <SliderItem src={Interne} link="https://interne.com.br" text="Interne" />
             </Slider>
           ) : (
             <Slider {...settingsMobile}>
-              <SliderItem src={Medortopedista} text="Médico Ortopedista" />
-              <SliderItem src={Terapeuta} text="Terapeuta Ocupacional" />
-              <SliderItem src={Cuidadores} text="Cuidadores Pessoais" />
-              <SliderItem
-                src={Enfermeira}
-                text="Enfermeira (cuidados paliativos e assistência domiciliar)"
-              />
-              <SliderItem src={Supervisora} text="Enfermeira Supervisora" />
-              <SliderItem src={Fisioterapeuta} text="Fisioterapeuta" />
-              <SliderItem src={Nutricionista} text="Nutricionista" />
-              <SliderItem src={Educador} text="Educador físico" />
+              <SliderItem src={TiSaude} link="https://www.tisaude.com" text="TiSaude" />
+              <SliderItem src={Fecomercio} link="https://www.fecomercio-ce.com.br" text="Fecomércio-CE" />
+              <SliderItem src={DPSP} link="https://www.grupodpsp.com.br" text="DPSP" />
+              <SliderItem src={Interne} link="https://interne.com.br" text="Interne" />
             </Slider>
           )}
         </Flex>

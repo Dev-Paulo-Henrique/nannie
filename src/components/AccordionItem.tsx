@@ -12,8 +12,8 @@ import { CircleIcon } from "./Circle";
 interface AccordionItemProps {
   title: string;
   firstText: string;
-  bold: string;
-  secondText: string;
+  bold?: string;
+  secondText?: string;
 }
 
 export function AccordionItemElement({ title, firstText, bold, secondText}: AccordionItemProps) {
