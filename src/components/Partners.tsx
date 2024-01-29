@@ -26,27 +26,27 @@ export function Partners() {
     infinite: true,
     speed: 4000,
     autoplaySpeed: 2000,
-    slidesToShow: 1,
+    slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
     centerMode: false,
     arrows: false,
     cssEase: "linear",
-    variableWidth: true
     // centerPadding: '60px',
   };
 
   const settingsMobile = {
     dots: false,
     infinite: true,
-    speed: 2000,
+    speed: 4000,
     slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
     centerMode: false,
     arrows: false,
     autoplaySpeed: 2000,
-    cssEase: "linear"
+    cssEase: "linear",
+    variableWidth: true
     // centerPadding: '120px',
   };
   return (

@@ -41,7 +41,7 @@ export function Care() {
         //   bgRepeat="no-repeat"
         //   bgPosition="bottom right"
       >
-        <Box w="md" mb={{ base: 5, md: 0 }} maxW="40%">
+        <Box w="md" mb={{ base: 5, md: 0 }} maxW={{md: "40%"}}>
           <Heading
             fontWeight="bold"
             fontSize={{ base: 30, md: 55 }}
