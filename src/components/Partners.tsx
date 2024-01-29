@@ -25,7 +25,6 @@ export function Partners() {
     dots: false,
     infinite: true,
     speed: 4000,
-    lazyLoad: true,
     autoplaySpeed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1,
