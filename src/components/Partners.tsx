@@ -5,6 +5,12 @@ import {
   Heading,
   useBreakpointValue,
   Divider,
+  Image,
+  Link,
+  Grid,
+  Center,
+  // Wrap,
+  // WrapItem
 } from "@chakra-ui/react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -35,20 +41,6 @@ export function Partners() {
     // centerPadding: '60px',
   };
 
-  const settingsMobile = {
-    dots: false,
-    infinite: true,
-    speed: 4000,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    autoplay: true,
-    centerMode: false,
-    arrows: false,
-    autoplaySpeed: 2000,
-    cssEase: "linear",
-    variableWidth: true
-    // centerPadding: '120px',
-  };
   return (
     <>
       <Flex
@@ -112,12 +104,14 @@ export function Partners() {
               <SliderItem src={Interne} link="https://interne.com.br" text="Interne" />
             </Slider>
           ) : (
-            <Slider {...settingsMobile}>
-              <SliderItem src={TiSaude} link="https://www.tisaude.com" text="TiSaude" />
-              <SliderItem src={Fecomercio} link="https://www.fecomercio-ce.com.br" text="Fecomércio-CE" />
-              <SliderItem src={DPSP} link="https://www.grupodpsp.com.br" text="DPSP" />
-              <SliderItem src={Interne} link="https://interne.com.br" text="Interne" />
-            </Slider>
+            // <Slider {...settingsMobile}>
+            <Grid templateColumns="repeat(2, 1fr)" alignItems="center" gap={6}>
+              <Center><Link href="https://www.fecomercio-ce.com.br" target="_blank"><Image maxW="100%" src={Fecomercio} /></Link></Center>
+              <Center><Link href="https://interne.com.br" target="_blank"><Image maxW="100%"  src={Interne} /></Link></Center>
+              <Center><Link href="https://www.tisaude.com" target="_blank"><Image maxW="100%" src={TiSaude} /></Link></Center>
+              <Center><Link href="https://www.grupodpsp.com.br" target="_blank"><Image maxW="100%" src={DPSP} /></Link></Center>
+            </Grid>
+            // </Slider>
           )}
         </Flex>
       </Flex>
