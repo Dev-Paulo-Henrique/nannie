@@ -12,6 +12,10 @@ type LanguageContextType = {
         home: string;
         contact: string;
       };
+      footer: {
+        part1: string;
+        part2: string;
+      };
       home: {
         main: {
           title: string;
@@ -34,6 +38,42 @@ type LanguageContextType = {
           cardtitle: string;
           cardsubtitle: string;
         };
+        partners: {
+          title: string;
+          subtitle: string;
+          description: string;
+        };
+        section: {
+          title: string;
+          category: string;
+          text: string;
+          button: string;
+        };
+        accordion: {
+          title: string;
+          item1: {
+            title: string;
+            text: string;
+          };
+          item2: {
+            title: string;
+            text: string;
+          };
+          item3: {
+            title: string;
+            text: string;
+          };
+        };
+        form: {
+            title: string;
+            input1: string;
+            placeholder1: string;
+            input2: string;
+            placeholder2: string;
+            input3: string;
+            placeholder3: string;
+            button: string;
+        }
       };
     };
     en: {
@@ -41,6 +81,10 @@ type LanguageContextType = {
         home: string;
         contact: string;
       };
+      footer: {
+        part1: string;
+        part2: string;
+      };
       home: {
         main: {
           title: string;
@@ -63,6 +107,42 @@ type LanguageContextType = {
           cardtitle: string;
           cardsubtitle: string;
         };
+        partners: {
+          title: string;
+          subtitle: string;
+          description: string;
+        };
+        section: {
+          title: string;
+          category: string;
+          text: string;
+          button: string;
+        };
+        accordion: {
+          title: string;
+          item1: {
+            title: string;
+            text: string;
+          };
+          item2: {
+            title: string;
+            text: string;
+          };
+          item3: {
+            title: string;
+            text: string;
+          };
+        };
+        form: {
+            title: string;
+            input1: string;
+            placeholder1: string;
+            input2: string;
+            placeholder2: string;
+            input3: string;
+            placeholder3: string;
+            button: string;
+        }
       };
     };
   };

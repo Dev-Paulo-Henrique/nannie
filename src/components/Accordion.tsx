@@ -1,8 +1,11 @@
 import { Flex, Accordion, Heading, Box } from "@chakra-ui/react";
 import { AccordionItemElement as AccordionItem } from "./AccordionItem";
 import Background from "../assets/waves.png";
+import { useLanguage } from '../context/LanguageContext';
 
 export function AccordionElement() {
+  const { flag, translations } = useLanguage();
+
   return (
     <Flex
       as="section"
@@ -26,7 +29,7 @@ export function AccordionElement() {
           fontFamily="Archivo"
           textAlign={{ base: "center", md: "start" }}
         >
-          TIRE TODAS AS SUAS DÚVIDAS
+          {translations[flag ? "pt" : "en"]["home"]["accordion"]["title"]}
         </Heading>
         {/* <Text
           color="gray.600"
@@ -41,30 +44,22 @@ export function AccordionElement() {
       </Box>
       <Accordion allowToggle flex={1} display="flex" flexDir="column" gap={2}>
         <AccordionItem
-          title="Como funciona nosso atendimento de saúde"
-          firstText="Os atendimentos são previamente agendados. 
-          Utilizamos uma plataforma digital certificada para as 
-          teleconsultas (consultas online) e a domicílio. 
-          Atendemos em qualquer lugar do Brasil ou no exterior por 
-          Teleconsulta.
-          Atendemos visitas domiciliares apenas na região 
-          metropolitana do Recife-PE."
+          title={translations[flag ? "pt" : "en"]["home"]["accordion"]["item1"]["title"]}
+          text={translations[flag ? "pt" : "en"]["home"]["accordion"]["item1"]["text"]}
           // bold="plano de cuidados personalizado"
           // secondText=". Os cuidadores são selecionados com base nas habilidades e experiências para atender às suas necessidades específicas."
         />
         <AccordionItem
-          title="Consultoria em saúde digital"
-          firstText="Planejamento estratégico, tendências e inovações tecnológicas. 
-          Jornada digital, da ideação à validação de serviços, processos e produtos digitais.
-          Assessoria e consultoria especializada para apoiar a transformação digital na saúde."
+          title={translations[flag ? "pt" : "en"]["home"]["accordion"]["item2"]["title"]}
+          text={translations[flag ? "pt" : "en"]["home"]["accordion"]["item2"]["text"]}
           // bold="(RMR)"
           // secondText=". Nosso modelo de atendimento é Home
           // Care. Isso significa que um profissional especializado irá
           // cuidar de você no conforto do seu lar."
         />
         <AccordionItem
-          title="Educação em saúde digital"
-          firstText={`Palestras, Cursos e Conteúdos sob demanda na área de saúde digital. Planejamento e organização educacional para oferta de cursos personalizados para gestores, profissionais e pacientes. Plataformas digitais para educação em saúde no ensino presencial ou à distância.`}
+          title={translations[flag ? "pt" : "en"]["home"]["accordion"]["item3"]["title"]}
+          text={translations[flag ? "pt" : "en"]["home"]["accordion"]["item3"]["text"]}
           // bold="aplicações e auxilia o uso"
           // secondText=" de medicamentos já prescritos pelo seu médico."
         />

@@ -4,6 +4,10 @@
       "home": "Início",
       "contact": "Contato"
     },
+    "footer": {
+        "part1": "Healthtech - Tecnologias Digitais na Saúde – Saúde Digital",
+        "part2": "todos os direitos reservados – "
+    },
     "home": {
       "main": {
         "title": "Estratégia e cuidado digital",
@@ -25,6 +29,42 @@
         "button": "Solicitar agora!",
         "cardtitle": "Conheça nossa equipe médica",
         "cardsubtitle": "Clique e agende um atendimento"
+      },
+      "partners": {
+        "title": "Parceiros",
+        "subtitle": "Clientes e",
+        "description": "Conheça quem já conheceu a Nannie"
+      },
+      "section": {
+        "category": "Saúde Digital",
+        "title": "MAIS QUE TECNOLOGIA",
+        "text": "A Nannie cuida do seu negócio. Incorporar as melhores práticas em saúde digital é fundamental para entregar soluções digitais que melhorarem a experiência do seu cliente e a performance da sua indústria ou serviço de saúde. Ofertamos consultoria estratégica para apoiar a transformação digital, conteúdos, palestras e cursos personalizados para gestores, profissionais de saúde e pacientes.",
+        "button": "Contrate agora!"
+      },
+      "accordion": {
+        "title": "TIRE TODAS AS SUAS DÚVIDAS",
+        "item1": {
+            "title": "Como funciona nosso atendimento de saúde",
+            "text": "Os atendimentos são previamente agendados. Utilizamos uma plataforma digital certificada para as teleconsultas (consultas online) e a domicílio. Atendemos em qualquer lugar do Brasil ou no exterior por Teleconsulta. Atendemos visitas domiciliares apenas na região metropolitana do Recife-PE."
+        },
+        "item2": {
+            "title": "Consultoria em saúde digital",
+            "text": "Planejamento estratégico, tendências e inovações tecnológicas. Jornada digital, da ideação à validação de serviços, processos e produtos digitais. Assessoria e consultoria especializada para apoiar a transformação digital na saúde."
+        },
+        "item3": {
+            "title": "Educação em saúde digital",
+            "text": "Palestras, Cursos e Conteúdos sob demanda na área de saúde digital. Planejamento e organização educacional para oferta de cursos personalizados para gestores, profissionais e pacientes. Plataformas digitais para educação em saúde no ensino presencial ou à distância."
+        }
+      },
+      "form": {
+        "title": "Contato",
+        "input1": "Como você se chama?",
+        "placeholder1": "Digite seu nome...",
+        "input2": "De onde você é?",
+        "placeholder2": "Selecione uma opção",
+        "input3": "Como podemos te ajudar?",
+        "placeholder3": "Selecione uma opção",
+        "button": "Enviar"
       }
     }
   },
@@ -32,6 +72,10 @@
     "header": {
       "home": "Home",
       "contact": "Contact"
+    },
+    "footer": {
+        "part1": "Healthtech - Digital Technologies in Health – Digital Health",
+        "part2": "all rights reserved – "
     },
     "home": {
       "main": {
@@ -54,6 +98,42 @@
         "button": "Request now!",
         "cardtitle": "Meet our medical team",
         "cardsubtitle": "Click and schedule an appointment"
+      },
+      "partners": {
+        "title": "Partners",
+        "subtitle": "Clients and",
+        "description": "Get to know those who have already experienced Nannie"
+      },
+      "section": {
+        "category": "Digital Health",
+        "title": "MORE THAN TECHNOLOGY",
+        "text": "Nannie takes care of your business. Incorporating the best practices in digital health is essential to deliver digital solutions that enhance your customer's experience and the performance of your healthcare industry or service. We offer strategic consulting to support digital transformation, tailored content, lectures, and courses for managers, healthcare professionals, and patients.",
+        "button": "Hire now!"
+      },
+      "accordion": {
+        "title": "GET ALL YOUR QUESTIONS ANSWERED",
+        "item1": {
+          "title": "How does our healthcare service work",
+          "text": "Appointments are scheduled in advance. We use a certified digital platform for teleconsultations (online consultations) and home visits. We serve anywhere in Brazil or abroad through Teleconsultation. We provide home visits only in the metropolitan region of Recife-PE."
+        },
+        "item2": {
+          "title": "Digital health consulting",
+          "text": "Strategic planning, trends, and technological innovations. Digital journey, from ideation to validation of digital services, processes, and products. Specialized consultancy and advice to support digital transformation in healthcare."
+        },
+        "item3": {
+          "title": "Digital health education",
+          "text": "Lectures, Courses, and On-demand content in the field of digital health. Planning and educational organization for offering customized courses for managers, professionals, and patients. Digital platforms for health education in face-to-face or distance learning."
+        }
+      },
+      "form": {
+        "title": "Contact",
+        "input1": "What is your name?",
+        "placeholder1": "Enter your name...",
+        "input2": "Where are you from?",
+        "placeholder2": "Select an option",
+        "input3": "How can we help you?",
+        "placeholder3": "Select an option",
+        "button": "Send"
       }
     }
   }

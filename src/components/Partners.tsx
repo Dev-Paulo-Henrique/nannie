@@ -20,6 +20,7 @@ import TiSaude from "../assets/logo_ti-saude.png";
 import Fecomercio from "../assets/logo_fecomercio.png";
 import DPSP from "../assets/logo_dpsp.png";
 import Interne from "../assets/logo_interne.png";
+import { useLanguage } from '../context/LanguageContext';
 
 export function Partners() {
   const isWideVersion = useBreakpointValue({
@@ -40,6 +41,8 @@ export function Partners() {
     cssEase: "linear",
     // centerPadding: '60px',
   };
+
+  const { flag, translations } = useLanguage();
 
   return (
     <>
@@ -64,7 +67,7 @@ export function Partners() {
             // textAlign={{ base: "center", md: "start" }}
             fontSize={{ base: 18, md: 24 }}
           >
-            Clientes e
+            {translations[flag ? "pt" : "en"]["home"]["partners"]["subtitle"]}
           </Text>
           <Heading
             fontWeight="bold"
@@ -74,7 +77,7 @@ export function Partners() {
             mt={-3}
             // textAlign={{ base: "center", md: "start" }}
           >
-            Parceiros
+            {translations[flag ? "pt" : "en"]["home"]["partners"]["title"]}
           </Heading>
           <Divider
             orientation="horizontal"
@@ -92,7 +95,7 @@ export function Partners() {
             mt={6}
             maxW={400}
           >
-            Conheça quem já conheceu a Nannie
+            {translations[flag ? "pt" : "en"]["home"]["partners"]["description"]}
           </Text>
         </Box>
         <Flex flex={1}>

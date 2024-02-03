@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/react";
 import PCD from "../assets/treinamento.jpg";
 // import XXX from "../assets/xxx-min.png";
+import { useLanguage } from '../context/LanguageContext';
 
 export function Section() {
   // const isWideVersion = useBreakpointValue({
@@ -18,6 +19,8 @@ export function Section() {
   //   lg: true
   // })
   const breakpoint = useBreakpoint({ ssr: false });
+  const { flag, translations } = useLanguage();
+
   return (
     <>
       <Flex
@@ -44,7 +47,7 @@ export function Section() {
             bg="gray.600"
             p={2}
           >
-            Saúde Digital
+            {translations[flag ? "pt" : "en"]["home"]["section"]["category"]}
           </Text>
           <Box borderBottomColor="gray.600" borderBottomWidth={1}></Box>
           <Heading
@@ -54,8 +57,8 @@ export function Section() {
             fontFamily="Archivo"
             my={2}
             // textAlign={{ base: "center", md: "start" }}
-          >
-            MAIS QUE TECNOLOGIA
+            >
+            {translations[flag ? "pt" : "en"]["home"]["section"]["title"]}
           </Heading>
           <Text
             color="gray.600"
@@ -66,13 +69,8 @@ export function Section() {
             borderLeftWidth={3}
             pl={6}
             borderLeftColor="#09B3CD"
-          >
-            A Nannie cuida do seu negócio. Incorporar as melhores práticas em
-            saúde digital é fundamental para entregar soluções digitais que
-            melhorarem a experiência do seu cliente e a performance da sua
-            indústria ou serviço de saúde. Ofertamos consultoria estratégica
-            para apoiar a transformação digital, conteúdos, palestras e cursos
-            personalizados para gestores, profissionais de saúde e pacientes.
+            >
+            {translations[flag ? "pt" : "en"]["home"]["section"]["text"]}
           </Text>
           {breakpoint == "base" && (
             <Center my={2}>
@@ -90,8 +88,8 @@ export function Section() {
               w={200}
               h={50}
               isDisabled
-            >
-              Contrate agora!
+              >
+              {translations[flag ? "pt" : "en"]["home"]["section"]["button"]}
             </Button>
           </Center>
         </Box>

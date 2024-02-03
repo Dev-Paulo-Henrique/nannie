@@ -1,8 +1,11 @@
 import { Flex, Text, Image } from "@chakra-ui/react";
 import Logo from "../assets/logo-footer.png";
 import Wave from "../assets/svg/wave.svg";
+import { useLanguage } from '../context/LanguageContext';
 
 export function Footer() {
+  const { flag, translations } = useLanguage();
+
   return (
     <Flex
       as="footer"
@@ -27,9 +30,10 @@ export function Footer() {
         fontSize={{ base: 14, md: 16 }}
         color="gray.500"
       >
-        Healthtech - Tecnologias Digitais na Saúde – Saúde Digital
+        {translations[flag ? "pt" : "en"]["footer"]["part1"]}
         <br />
-        todos os direitos reservados – {new Date().getUTCFullYear()}©
+        {translations[flag ? "pt" : "en"]["footer"]["part2"]}
+         {new Date().getUTCFullYear()}©
       </Text>
     </Flex>
   );

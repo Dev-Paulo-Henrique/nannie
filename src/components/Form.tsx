@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { useFormik } from "formik";
 // import Geonames from "geonames.js";
+import { useLanguage } from '../context/LanguageContext';
 
 export function Form() {
   const formik = useFormik({
@@ -22,6 +23,8 @@ export function Form() {
       alert(JSON.stringify(values, null, 2));
     },
   });
+
+  const { flag, translations } = useLanguage();
 
   // const geonames = Geonames({
   //   username: "myusername",
@@ -51,7 +54,7 @@ export function Form() {
       id="contato"
     >
       <Heading color="#09B3CD" fontWeight={600} mb={5} overflowY="hidden">
-        Contato
+      {translations[flag ? "pt" : "en"]["home"]["form"]["title"]}
       </Heading>
       <Box
         w={{ base: "2sm", md: "xl" }}
@@ -67,10 +70,10 @@ export function Form() {
               fontSize={20}
               htmlFor="name"
             >
-              Como você se chama?
+              {translations[flag ? "pt" : "en"]["home"]["form"]["input1"]}
             </FormLabel>
             <Input
-              placeholder="Digite seu nome..."
+              placeholder={translations[flag ? "pt" : "en"]["home"]["form"]["placeholder1"]}
               color="gray.500"
               onChange={formik.handleChange}
               value={formik.values.name}
@@ -85,10 +88,10 @@ export function Form() {
               fontSize={20}
               htmlFor="local"
             >
-              De onde você é?
+              {translations[flag ? "pt" : "en"]["home"]["form"]["input2"]}
             </FormLabel>
             <Select
-              placeholder="Selecione uma opção"
+              placeholder={translations[flag ? "pt" : "en"]["home"]["form"]["placeholder2"]}
               color="gray.500"
               id="local"
               name="local"
@@ -103,10 +106,10 @@ export function Form() {
           </FormControl>
           <FormControl isRequired>
             <FormLabel color="#09B3CD" fontWeight="regular" fontSize={20}>
-              Como podemos te ajudar?
+            {translations[flag ? "pt" : "en"]["home"]["form"]["input3"]}
             </FormLabel>
             <Select
-              placeholder="Selecione uma opção"
+              placeholder={translations[flag ? "pt" : "en"]["home"]["form"]["placeholder3"]}
               color="gray.500"
               id="option"
               name="option"
@@ -127,7 +130,7 @@ export function Form() {
             // isLoading={props.isSubmitting}
             type="submit"
           >
-            Enviar
+            {translations[flag ? "pt" : "en"]["home"]["form"]["button"]}
           </Button>
         </form>
       </Box>

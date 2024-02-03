@@ -11,12 +11,12 @@ import { CircleIcon } from "./Circle";
 
 interface AccordionItemProps {
   title: string;
-  firstText: string;
+  text: string;
   bold?: string;
   secondText?: string;
 }
 
-export function AccordionItemElement({ title, firstText, bold, secondText}: AccordionItemProps) {
+export function AccordionItemElement({ title, text, bold, secondText}: AccordionItemProps) {
   return (
     <AccordionItem border="none">
       {({ isExpanded }) => (
@@ -39,7 +39,7 @@ export function AccordionItemElement({ title, firstText, bold, secondText}: Acco
                 <AccordionIcon transform="rotate(-90deg)" />
               )}
             </AccordionButton>
-          <AccordionPanel pb={4} fontFamily="Archivo" bg="white" borderRadius="0 0 10px 10px" color="gray.500">{firstText}<Text as="b" fontFamily="Archivo" color="gray.600">{bold}</Text>{secondText}</AccordionPanel>
+          <AccordionPanel pb={4} fontFamily="Archivo" bg="white" borderRadius="0 0 10px 10px" color="gray.500">{text}<Text as="b" fontFamily="Archivo" color="gray.600">{bold}</Text>{secondText}</AccordionPanel>
         </>
       )}
     </AccordionItem>
