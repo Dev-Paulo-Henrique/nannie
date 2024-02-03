@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react";
 // import Heart from "../assets/svg/heart.svg";
 import Cuidador from "../assets/doutuora.jpg";
+import { useLanguage } from "../context/LanguageContext";
 
 export function Card() {
   // const isWideVersion = useBreakpointValue({
@@ -17,6 +18,8 @@ export function Card() {
   //   lg: true
   // })
   //   const breakpoint = useBreakpoint({ ssr: false });
+  const { flag, translations } = useLanguage();
+
   return (
     <>
       <Flex
@@ -55,7 +58,7 @@ export function Card() {
             overflow="hidden"
             fontSize={{ base: 22, md: 36 }}
           >
-            Conheça nossa equipe médica
+            {translations[flag ? "pt" : "en"]["home"]["care"]["cardtitle"]}
           </Heading>
           <Text
             color="gray.600"
@@ -63,7 +66,7 @@ export function Card() {
             my={2}
             maxW={300}
           >
-            Clique e agende um atendimento
+            {translations[flag ? "pt" : "en"]["home"]["care"]["cardsubtitle"]}
           </Text>
           <Button
             mt={2}
@@ -76,7 +79,7 @@ export function Card() {
             h={50}
             isDisabled
           >
-            Solicitar agora!
+            {translations[flag ? "pt" : "en"]["home"]["care"]["button"]}
           </Button>
         </Flex>
       </Flex>

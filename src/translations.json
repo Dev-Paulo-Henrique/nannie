@@ -13,6 +13,18 @@
         "imgtext1": "Consultoria estratégica em saúde digital  para melhorar a performance do seu negócio",
         "imgtitle2": "Nannie é saúde",
         "imgtext2": "Atendimento médico e de enfermagem online e domiciliar. Agende e nós vamos até você!"
+      },
+      "care": {
+        "title": "MAIS QUE CUIDADOS",
+        "subtitle": "CONFORTO E ATENDIMENTO PERSONALIZADO",
+        "description": "Agende uma teleconsulta com nossos médicos e enfermeiros. Mas se preferir nossa equipe vai até você, no conforto do seu lar. Nosso foco é manter sua saúde e qualidade de vida.",
+        "item1": "Consultas médicas para avaliação e monitoramento clínico",
+        "item2": "Apoio para seguimento de planos de cuidado prescritos por seu médico",
+        "item3": "Visitas médica e de enfermagem para pacientes idosos independentes, doentes crônicos",
+        "item4": "Orientação para o paciente, cuidadores e familiares sobre cuidados básicos e medicamentos",
+        "button": "Solicitar agora!",
+        "cardtitle": "Conheça nossa equipe médica",
+        "cardsubtitle": "Clique e agende um atendimento"
       }
     }
   },
@@ -30,6 +42,18 @@
         "imgtext1": "Strategic consulting in digital health to improve the performance of your business.",
         "imgtitle2": "Nannie is health",
         "imgtext2": "Online and home medical and nursing care. Schedule an appointment, and we'll come to you!"
+      },
+      "care": {
+        "title": "MORE THAN CARE",
+        "subtitle": "COMFORT AND PERSONALIZED ATTENTION",
+        "description": "Schedule a teleconsultation with our doctors and nurses. But if you prefer, our team will come to you in the comfort of your home. Our focus is to maintain your health and quality of life.",
+        "item1": "Medical consultations for assessment and clinical monitoring",
+        "item2": "Support for following care plans prescribed by your doctor",
+        "item3": "Medical and nursing visits for independent elderly patients, and chronic patients",
+        "item4": "Guidance for patients, caregivers, and family members on basic care and medications",
+        "button": "Request now!",
+        "cardtitle": "Meet our medical team",
+        "cardsubtitle": "Click and schedule an appointment"
       }
     }
   }

@@ -9,7 +9,6 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import Logo from "../assets/logo-header.png";
-import { Translate } from "./Translate";
 import { useLanguage } from '../context/LanguageContext';
 
 export function Header() {
@@ -72,7 +71,6 @@ export function Header() {
         display={{ base: isOpen ? "block" : "none", md: "block" }}
         mt={{ base: 4, md: 0 }}
       >
-        <Translate />
       </Box>
     </Flex>
   );

@@ -17,12 +17,14 @@ import Cuidador from "../assets/doutuora.jpg";
 // import Agent from "../assets/enfermeira_angellus_rec-min-1024x733.jpg";
 import { Item } from "./Wrap";
 import { Card } from "./Card";
+import { useLanguage } from '../context/LanguageContext';
 
 export function Care() {
   // const isWideVersion = useBreakpointValue({
   //   base: false,
   //   lg: true
   // })
+  const { flag, translations } = useLanguage();
   const breakpoint = useBreakpoint({ ssr: false });
   return (
     <>
@@ -50,7 +52,7 @@ export function Care() {
             // mt={-3}
             textAlign={{ base: "center", md: "start" }}
           >
-            MAIS QUE CUIDADOS
+            {translations[flag ? "pt" : "en"]["home"]["care"]["title"]}
           </Heading>
           <Text
             as="b"
@@ -63,7 +65,7 @@ export function Care() {
             display="flex"
             flexDirection="row"
           >
-            CONFORTO E ATENDIMENTO PERSONALIZADO
+            {translations[flag ? "pt" : "en"]["home"]["care"]["subtitle"]}
           </Text>
           <Text
             color="gray.600"
@@ -74,15 +76,13 @@ export function Care() {
             my={4}
             maxW={400}
           >
-            Agende uma teleconsulta com nossos médicos e enfermeiros. Mas se
-            preferir nossa equipe vai até você, no conforto do seu lar. Nosso
-            foco é manter sua saúde e qualidade de vida.{" "}
+            {translations[flag ? "pt" : "en"]["home"]["care"]["description"]}
           </Text>
           <Wrap justify="space-between">
-            <Item text=" Consultas médicas para avaliação e monitoramento clínico" />
-            <Item text="Apoio para seguimento de planos de cuidado prescritos por seu médico" />
-            <Item text="Visitas médica e de enfermagem para pacientes idosos independentes, doentes crônicos" />
-            <Item text="Orientação para o paciente, cuidadores e familiares sobre cuidados básicos e medicamentos" />
+            <Item text={translations[flag ? "pt" : "en"]["home"]["care"]["item1"]} />
+            <Item text={translations[flag ? "pt" : "en"]["home"]["care"]["item2"]} />
+            <Item text={translations[flag ? "pt" : "en"]["home"]["care"]["item3"]} />
+            <Item text={translations[flag ? "pt" : "en"]["home"]["care"]["item4"]} />
           </Wrap>
           {breakpoint == "base" && (
             <Center
@@ -104,7 +104,7 @@ export function Care() {
                 overflow="hidden"
                 fontSize={{ base: 22, md: 36 }}
               >
-                Conheça nossa equipe médica
+                {translations[flag ? "pt" : "en"]["home"]["care"]["cardtitle"]}
               </Heading>
               <Text
                 color="gray.600"
@@ -113,7 +113,7 @@ export function Care() {
                 fontWeight="bold"
                 // maxW={300}
               >
-                Clique e agende um atendimento
+                {translations[flag ? "pt" : "en"]["home"]["care"]["cardsubtitle"]}
               </Text>
               <Button
                 mt={2}
@@ -124,8 +124,9 @@ export function Care() {
                 _hover={{ bg: "#0793A8", borderColor: "#0793A8" }}
                 w={200}
                 h={50}
+                isDisabled
               >
-                Solicitar agora!
+                {translations[flag ? "pt" : "en"]["home"]["care"]["button"]}
               </Button>
             </Center>
           )}

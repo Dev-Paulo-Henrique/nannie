@@ -9,9 +9,9 @@ type LanguageContextType = {
   translations: {
     pt: {
       header: {
-      home: string;
-      contact: string;
-    },
+        home: string;
+        contact: string;
+      };
       home: {
         main: {
           title: string;
@@ -22,13 +22,25 @@ type LanguageContextType = {
           imgtitle2: string;
           imgtext2: string;
         };
+        care: {
+          title: string;
+          subtitle: string;
+          description: string;
+          item1: string;
+          item2: string;
+          item3: string;
+          item4: string;
+          button: string;
+          cardtitle: string;
+          cardsubtitle: string;
+        };
       };
     };
     en: {
       header: {
-      home: string;
-      contact: string;
-    },
+        home: string;
+        contact: string;
+      };
       home: {
         main: {
           title: string;
@@ -38,6 +50,18 @@ type LanguageContextType = {
           imgtext1: string;
           imgtitle2: string;
           imgtext2: string;
+        };
+        care: {
+          title: string;
+          subtitle: string;
+          description: string;
+          item1: string;
+          item2: string;
+          item3: string;
+          item4: string;
+          button: string;
+          cardtitle: string;
+          cardsubtitle: string;
         };
       };
     };
@@ -69,7 +93,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
     flag,
     toggleLanguage,
     translate,
-    translations
+    translations,
   };
 
   return (

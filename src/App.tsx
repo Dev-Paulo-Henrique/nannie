@@ -10,6 +10,7 @@ import { Partners } from "./components/Partners.tsx";
 import { Care } from "./components/Care.tsx";
 import { Main } from "./components/Main.tsx";
 import { LanguageProvider } from "./context/LanguageContext";
+import { Translate } from "./components/Translate";
 
 function App() {
   const [isLoad, setIsLoad] = useState(true);
@@ -32,6 +33,7 @@ function App() {
             <Accordion />
             <Form />
             <Footer />
+            <Translate/>
             {/* <FloatingButton /> */}
           </LanguageProvider>
         </>
