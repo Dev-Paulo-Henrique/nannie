@@ -9,6 +9,7 @@ import { Section } from "./components/Section.tsx";
 import { Partners } from "./components/Partners.tsx";
 import { Care } from "./components/Care.tsx";
 import { Main } from "./components/Main.tsx";
+import { LanguageProvider } from "./context/LanguageContext";
 
 function App() {
   const [isLoad, setIsLoad] = useState(true);
@@ -22,15 +23,17 @@ function App() {
         <Load />
       ) : (
         <>
-          <Header />
-          <Main />
-          <Care />
-          <Partners />
-          <Section />
-          <Accordion />
-          <Form />
-          <Footer />
-          {/* <FloatingButton /> */}
+          <LanguageProvider>
+            <Header />
+            <Main />
+            <Care />
+            <Partners />
+            <Section />
+            <Accordion />
+            <Form />
+            <Footer />
+            {/* <FloatingButton /> */}
+          </LanguageProvider>
         </>
       )}
     </>

@@ -2,9 +2,11 @@ import { Grid, Flex, Box, Text, Heading } from "@chakra-ui/react";
 import Photo1 from "../assets/Transformacao-digital-na-area-da-saude.webp";
 import Photo2 from "../assets/como-atender-na-telemedicina-telemedicina-morsch.webp";
 import { Images } from "./Images";
+import { useLanguage } from '../context/LanguageContext';
 
 
 export function Main() {
+  const { flag, translations } = useLanguage();
 
   return (
     <>
@@ -21,6 +23,7 @@ export function Main() {
         id="home"
       >
         <Box w="md" pr={{ md: 50 }} mb={{ base: 5, md: 0 }} flex={{ md: 1 }}>
+        <h1 id="greeting"></h1>
           <Heading
             fontWeight="bold"
             fontSize={{ base: 30, md: 55 }}
@@ -28,7 +31,7 @@ export function Main() {
             fontFamily="Archivo"
             textAlign={{ base: "center", md: "start" }}
           >
-            Estratégia e cuidado digital
+            {translations[flag ? "pt" : "en"]["home"]["main"]["title"]}
           </Heading>
           <Text
             color="gray.600"
@@ -37,24 +40,22 @@ export function Main() {
             textAlign="justify"
             fontSize={{ base: 14, md: 18 }}
           >
-            A Nannie é uma empresa de saúde digital (Health Tech) que desenvolve
-            e oferta soluções para personalizar e agilizar o cuidado em saúde.
+            {translations[flag ? "pt" : "en"]["home"]["main"]["text1"]}
             <br />
             <br />
-            Buscamos os melhores desfechos clínicos e a melhor experiência para
-            o paciente, profissionais e serviços de saúde.
+            {translations[flag ? "pt" : "en"]["home"]["main"]["text2"]}
           </Text>
         </Box>
         <Grid templateColumns="repeat(2, 1fr)" gap={4} flex={1}>
           <Images
             src={Photo1}
-            title="Nannie é tecnologia"
-            text="Consultoria estratégica em saúde digital  para melhorar a performance do seu negócio"
+            title={translations[flag ? "pt" : "en"]["home"]["main"]["imgtitle1"]}
+            text={translations[flag ? "pt" : "en"]["home"]["main"]["imgtext1"]}
           />
           <Images
             src={Photo2}
-            title="Nannie é saúde"
-            text="Atendimento médico e de enfermagem online e domiciliar. Agende e nós vamos até você!"
+            title={translations[flag ? "pt" : "en"]["home"]["main"]["imgtitle2"]}
+            text={translations[flag ? "pt" : "en"]["home"]["main"]["imgtext2"]}
           />
         </Grid>
       </Flex>

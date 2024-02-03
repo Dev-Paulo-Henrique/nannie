@@ -1,0 +1,36 @@
+{
+  "pt": {
+    "header": {
+      "home": "Início",
+      "contact": "Contato"
+    },
+    "home": {
+      "main": {
+        "title": "Estratégia e cuidado digital",
+        "text1": "A Nannie é uma empresa de saúde digital (Health Tech) que desenvolve e oferta soluções para personalizar e agilizar o cuidado em saúde.",
+        "text2": "Buscamos os melhores desfechos clínicos e a melhor experiência para o paciente, profissionais e serviços de saúde.",
+        "imgtitle1": "Nannie é tecnologia",
+        "imgtext1": "Consultoria estratégica em saúde digital  para melhorar a performance do seu negócio",
+        "imgtitle2": "Nannie é saúde",
+        "imgtext2": "Atendimento médico e de enfermagem online e domiciliar. Agende e nós vamos até você!"
+      }
+    }
+  },
+  "en": {
+    "header": {
+      "home": "Home",
+      "contact": "Contact"
+    },
+    "home": {
+      "main": {
+        "title": "Digital strategy and care",
+        "text1": "Nannie is a digital health company (Health Tech) that develops and provides solutions to personalize and streamline healthcare.",
+        "text2": "We aim for the best clinical outcomes and the best experience for patients, healthcare professionals, and health services.",
+        "imgtitle1": "Nannie is technology",
+        "imgtext1": "Strategic consulting in digital health to improve the performance of your business.",
+        "imgtitle2": "Nannie is health",
+        "imgtext2": "Online and home medical and nursing care. Schedule an appointment, and we'll come to you!"
+      }
+    }
+  }
+}
