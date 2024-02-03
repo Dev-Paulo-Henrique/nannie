@@ -19,9 +19,14 @@ export function Translate() {
       <Button
         variant="outline"
         fontFamily="Archivo"
+        borderColor="#0793A8"
         colorScheme="#0793A8"
         _hover={{ bg: "#0793A8", borderColor: "#0793A8" }}
         // onClick={setFlag.toggle}
+        position="fixed"
+        bottom={5}
+        right={5}
+        zIndex={999}
         onClick={toggleLanguage}
       >
         {flag == true ? (
