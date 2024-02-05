@@ -24,7 +24,7 @@ export function AccordionElement() {
       <Box w="md" mr={{ md: 50 }} mb={{ base: 5, md: 0 }} flex={{ md: 1 }}>
         <Heading
           fontWeight="bold"
-          fontSize={{ base: 25, md: 45 }}
+          fontSize={{ base: 30, md: 45 }}
           color="#09B3CD"
           fontFamily="Archivo"
           textAlign={{ base: "center", md: "start" }}

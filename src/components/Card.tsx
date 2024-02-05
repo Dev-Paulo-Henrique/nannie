@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import {
   Flex,
   Heading,
@@ -9,7 +10,8 @@ import {
   // useBreakpointValue,
 } from "@chakra-ui/react";
 // import Heart from "../assets/svg/heart.svg";
-import Cuidador from "../assets/doutuora.jpg";
+import Doutora from "../assets/doutora.jpg";
+import Doutor from "../assets/doutor.jpg";
 import { useLanguage } from "../context/LanguageContext";
 
 export function Card() {
@@ -19,6 +21,16 @@ export function Card() {
   // })
   //   const breakpoint = useBreakpoint({ ssr: false });
   const { flag, translations } = useLanguage();
+  const [imageIndex, setImageIndex] = useState(0);
+  const images = [Doutora, Doutor];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, [images]);
 
   return (
     <>
@@ -41,7 +53,7 @@ export function Card() {
       >
         <Box display="absolute" mr={10}>
           <Image
-            src={Cuidador}
+            src={images[imageIndex]}
             rounded="100%"
             w={250}
             h={250}

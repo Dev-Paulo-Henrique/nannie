@@ -69,7 +69,9 @@ type LanguageContextType = {
             input1: string;
             placeholder1: string;
             input2: string;
-            placeholder2: string;
+            country: string;
+            state: string;
+            city: string;
             input3: string;
             placeholder3: string;
             button: string;
@@ -138,7 +140,9 @@ type LanguageContextType = {
             input1: string;
             placeholder1: string;
             input2: string;
-            placeholder2: string;
+            country: string;
+            state: string;
+            city: string;
             input3: string;
             placeholder3: string;
             button: string;

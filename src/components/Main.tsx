@@ -26,7 +26,7 @@ export function Main() {
         <h1 id="greeting"></h1>
           <Heading
             fontWeight="bold"
-            fontSize={{ base: 30, md: 55 }}
+            fontSize={{ base: 30, md: 45 }}
             color="#09B3CD"
             fontFamily="Archivo"
             textAlign={{ base: "center", md: "start" }}

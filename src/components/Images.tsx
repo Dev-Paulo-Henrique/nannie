@@ -19,7 +19,7 @@ export function Images({ src, title, text }:ImageProps) {
       <Text as="b" color="gray.600" fontSize={{base: 16, md: 26}}>
         {title}
       </Text>
-      <Text color="gray.500" fontSize={{base: 12, md: 18}} textAlign="justify">
+      <Text color="gray.500" fontSize={{base: 12, md: 18}} textAlign="center">
         {text}
       </Text>
     </Flex>

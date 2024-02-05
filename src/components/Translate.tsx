@@ -21,7 +21,8 @@ export function Translate() {
         fontFamily="Archivo"
         borderColor="#0793A8"
         colorScheme="#0793A8"
-        _hover={{ bg: "#0793A8", borderColor: "#0793A8" }}
+        bg="white"
+        _hover={{ bg: "#eee" }}
         // onClick={setFlag.toggle}
         position="fixed"
         bottom={5}

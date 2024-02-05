@@ -52,7 +52,7 @@ export function Section() {
           <Box borderBottomColor="gray.600" borderBottomWidth={1}></Box>
           <Heading
             fontWeight="bold"
-            fontSize={{ base: 30, md: 60 }}
+            fontSize={{ base: 30, md: 45 }}
             color="#09B3CD"
             fontFamily="Archivo"
             my={2}

@@ -56,8 +56,8 @@ export function Partners() {
         py={{ base: 5, md: 50 }}
         // bg="white"
         color="white"
-        mt={10}
-        bgGradient="linear(to-b, white, rgb(8,178,204, 0.15))"
+        my={10}
+        bgGradient="linear(to-b, white, rgb(8,178,204, 0.15), rgb(8,178,204, 0.15), white)"
       >
         <Box w="md" mb={{ base: 5, md: 0 }} flex={{ md: 1 }}>
           <Text
@@ -71,10 +71,10 @@ export function Partners() {
           </Text>
           <Heading
             fontWeight="bold"
-            fontSize={{ base: 50, md: 80 }}
+            fontSize={{ base: 30, md: 45 }}
             color="#09B3CD"
             fontFamily="Archivo"
-            mt={-3}
+            mt={-2}
             // textAlign={{ base: "center", md: "start" }}
           >
             {translations[flag ? "pt" : "en"]["home"]["partners"]["title"]}
@@ -108,11 +108,11 @@ export function Partners() {
             </Slider>
           ) : (
             // <Slider {...settingsMobile}>
-            <Grid templateColumns="repeat(2, 1fr)" alignItems="center" gap={6}>
-              <Center><Link href="https://www.fecomercio-ce.com.br" target="_blank"><Image maxW="100%" src={Fecomercio} /></Link></Center>
-              <Center><Link href="https://interne.com.br" target="_blank"><Image maxW="100%"  src={Interne} /></Link></Center>
-              <Center><Link href="https://www.tisaude.com" target="_blank"><Image maxW="100%" src={TiSaude} /></Link></Center>
-              <Center><Link href="https://www.grupodpsp.com.br" target="_blank"><Image maxW="100%" src={DPSP} /></Link></Center>
+            <Grid templateColumns="repeat(2, 1fr)" alignItems="center" gap={4}>
+              <Center><Link href="https://www.tisaude.com" target="_blank"><Image maxW="100%" px={8} src={TiSaude} /></Link></Center>
+              <Center><Link href="https://www.grupodpsp.com.br" target="_blank"><Image maxW="100%" px={8} src={DPSP} /></Link></Center>
+              <Center><Link href="https://www.fecomercio-ce.com.br" target="_blank"><Image maxW="100%" px={8} src={Fecomercio} /></Link></Center>
+              <Center><Link href="https://interne.com.br" target="_blank"><Image maxW="100%" px={8}  src={Interne} /></Link></Center>
             </Grid>
             // </Slider>
           )}

@@ -10,28 +10,28 @@
     },
     "home": {
       "main": {
-        "title": "Estratégia e cuidado digital",
+        "title": "ESTRATÉGIA E CUIDADO DIGITAL",
         "text1": "A Nannie é uma empresa de saúde digital (Health Tech) que desenvolve e oferta soluções para personalizar e agilizar o cuidado em saúde.",
         "text2": "Buscamos os melhores desfechos clínicos e a melhor experiência para o paciente, profissionais e serviços de saúde.",
         "imgtitle1": "Nannie é tecnologia",
         "imgtext1": "Consultoria estratégica em saúde digital  para melhorar a performance do seu negócio",
         "imgtitle2": "Nannie é saúde",
-        "imgtext2": "Atendimento médico e de enfermagem online e domiciliar. Agende e nós vamos até você!"
+        "imgtext2": "Atendimento médico online e domiciliar. Agende e nós vamos até você!"
       },
       "care": {
         "title": "MAIS QUE CUIDADOS",
         "subtitle": "CONFORTO E ATENDIMENTO PERSONALIZADO",
-        "description": "Agende uma teleconsulta com nossos médicos e enfermeiros. Mas se preferir nossa equipe vai até você, no conforto do seu lar. Nosso foco é manter sua saúde e qualidade de vida.",
-        "item1": "Consultas médicas para avaliação e monitoramento clínico",
-        "item2": "Apoio para seguimento de planos de cuidado prescritos por seu médico",
-        "item3": "Visitas médica e de enfermagem para pacientes idosos independentes, doentes crônicos",
-        "item4": "Orientação para o paciente, cuidadores e familiares sobre cuidados básicos e medicamentos",
+        "description": "Agende uma teleconsulta com nossos médicos. Mas se preferir nossa equipe vai até você, no conforto do seu lar. Nosso foco é manter sua saúde e qualidade de vida.",
+        "item1": "Teleconsulta médica para avaliação e monitoramento de saúde",
+        "item2": "Visita médica domiciliar para pacientes idosos e doentes crônicos",
+        "item3": "Planejamento do cuidado a partir de prescrições médicas",
+        "item4": "Orientação online para cuidadores de idosos e medicações prescritas",
         "button": "Solicitar agora!",
         "cardtitle": "Conheça nossa equipe médica",
         "cardsubtitle": "Clique e agende um atendimento"
       },
       "partners": {
-        "title": "Parceiros",
+        "title": "PARCEIROS",
         "subtitle": "Clientes e",
         "description": "Conheça quem já conheceu a Nannie"
       },
@@ -57,11 +57,13 @@
         }
       },
       "form": {
-        "title": "Contato",
+        "title": "CONTATO",
         "input1": "Como você se chama?",
         "placeholder1": "Digite seu nome...",
         "input2": "De onde você é?",
-        "placeholder2": "Selecione uma opção",
+        "country": "Selecione um país",
+        "state": "Selecione um estado",
+        "city": "Selecione uma cidade",
         "input3": "Como podemos te ajudar?",
         "placeholder3": "Selecione uma opção",
         "button": "Enviar"
@@ -79,28 +81,28 @@
     },
     "home": {
       "main": {
-        "title": "Digital strategy and care",
+        "title": "DIGITAL STRATEGY AND CARE",
         "text1": "Nannie is a digital health company (Health Tech) that develops and provides solutions to personalize and streamline healthcare.",
         "text2": "We aim for the best clinical outcomes and the best experience for patients, healthcare professionals, and health services.",
         "imgtitle1": "Nannie is technology",
         "imgtext1": "Strategic consulting in digital health to improve the performance of your business.",
         "imgtitle2": "Nannie is health",
-        "imgtext2": "Online and home medical and nursing care. Schedule an appointment, and we'll come to you!"
+        "imgtext2": "Online and home medical care. Schedule an appointment, and we'll come to you!"
       },
       "care": {
         "title": "MORE THAN CARE",
         "subtitle": "COMFORT AND PERSONALIZED ATTENTION",
-        "description": "Schedule a teleconsultation with our doctors and nurses. But if you prefer, our team will come to you in the comfort of your home. Our focus is to maintain your health and quality of life.",
-        "item1": "Medical consultations for assessment and clinical monitoring",
-        "item2": "Support for following care plans prescribed by your doctor",
-        "item3": "Medical and nursing visits for independent elderly patients, and chronic patients",
-        "item4": "Guidance for patients, caregivers, and family members on basic care and medications",
+        "description": "Schedule a teleconsultation with our doctors. But if you prefer, our team will come to you in the comfort of your home. Our focus is to maintain your health and quality of life.",
+        "item1": "Medical teleconsultation for health assessment and monitoring",
+        "item2": "Home medical visit for elderly and chronically ill patients",
+        "item3": "Care planning based on medical prescriptions",
+        "item4": "Online Guidance for Elderly Caregivers and Prescription Medications",
         "button": "Request now!",
         "cardtitle": "Meet our medical team",
         "cardsubtitle": "Click and schedule an appointment"
       },
       "partners": {
-        "title": "Partners",
+        "title": "PARTNERS",
         "subtitle": "Clients and",
         "description": "Get to know those who have already experienced Nannie"
       },
@@ -126,11 +128,13 @@
         }
       },
       "form": {
-        "title": "Contact",
+        "title": "CONTACT",
         "input1": "What is your name?",
         "placeholder1": "Enter your name...",
         "input2": "Where are you from?",
-        "placeholder2": "Select an option",
+        "country": "Select a country",
+        "state": "Select a state",
+        "city": "Select a city",
         "input3": "How can we help you?",
         "placeholder3": "Select an option",
         "button": "Send"

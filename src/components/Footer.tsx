@@ -33,7 +33,7 @@ export function Footer() {
         {translations[flag ? "pt" : "en"]["footer"]["part1"]}
         <br />
         {translations[flag ? "pt" : "en"]["footer"]["part2"]}
-         {new Date().getUTCFullYear()}©
+         {new Date().getUTCFullYear()} ©
       </Text>
     </Flex>
   );

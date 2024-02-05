@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import {
   Flex,
   Heading,
@@ -13,7 +14,8 @@ import {
 import Waves from "../assets/svg/waves.svg";
 import Nivel from "../assets/svg/nivel.svg";
 // import Heart from "../assets/svg/heart.svg";
-import Cuidador from "../assets/doutuora.jpg";
+import Doutora from "../assets/doutora.jpg";
+import Doutor from "../assets/doutor.jpg";
 // import Agent from "../assets/enfermeira_angellus_rec-min-1024x733.jpg";
 import { Item } from "./Wrap";
 import { Card } from "./Card";
@@ -26,6 +28,17 @@ export function Care() {
   // })
   const { flag, translations } = useLanguage();
   const breakpoint = useBreakpoint({ ssr: false });
+  const [imageIndex, setImageIndex] = useState(0);
+  const images = [Doutora, Doutor];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, [images]);
+
   return (
     <>
       <Image src={Waves} transform="rotate(180deg)" />
@@ -46,7 +59,7 @@ export function Care() {
         <Box w="md" mb={{ base: 5, md: 0 }} maxW={{md: "40%"}}>
           <Heading
             fontWeight="bold"
-            fontSize={{ base: 30, md: 55 }}
+            fontSize={{ base: 30, md: 45 }}
             color="#09B3CD"
             fontFamily="Archivo"
             // mt={-3}
@@ -61,7 +74,7 @@ export function Care() {
             letterSpacing={1}
             mt={-2}
             textAlign={{ base: "center", md: "start" }}
-            fontSize={{ base: 14, md: 28 }}
+            fontSize={{ base: 14, md: 21 }}
             display="flex"
             flexDirection="row"
           >
@@ -93,9 +106,10 @@ export function Care() {
               alignItems="center"
             >
               <Image
-                src={Cuidador}
+                src={images[imageIndex]}
                 rounded="100%"
                 maxW={{ base: 300, md: 250 }}
+                h="25rem"
                 my={4}
               />
 
