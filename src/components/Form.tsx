@@ -11,7 +11,9 @@ import {
 import { useFormik } from "formik";
 // import Geonames from "geonames.js";
 import { useLanguage } from "../context/LanguageContext";
-import { Country, State, City } from "country-state-city";
+import { Country, State
+  // , City 
+} from "country-state-city";
 
 export function Form() {
   const countries = Country.getAllCountries();
@@ -128,7 +130,7 @@ export function Form() {
                 </option>
               ))}
             </Select>}
-            {formik.values.state && <Select
+            {/* {formik.values.state && <Select
               mt={3}
               placeholder={
                 translations[flag ? "pt" : "en"]["home"]["form"]["city"]
@@ -144,7 +146,7 @@ export function Form() {
                   {city.name}
                 </option>
               ))}
-            </Select>}
+            </Select>} */}
           </FormControl>
           <FormControl isRequired>
             <FormLabel color="#09B3CD" fontWeight="regular" fontSize={20}>
@@ -171,7 +173,7 @@ export function Form() {
             bg="#09B3CD"
             colorScheme="#0793A8"
             _hover={{ bg: "#0793A8", borderColor: "#0793A8" }}
-            // isDisabled={!formik.values.country || !formik.values.state || !formik.values.city || !formik.values.name || !formik.values.option}
+            isDisabled={!formik.values.country || !formik.values.state || !formik.values.city || !formik.values.name || !formik.values.option}
             // isLoading={props.isSubmitting}
             type="submit"
           >
