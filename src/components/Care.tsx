@@ -29,6 +29,7 @@ export function Care() {
   const { flag, translations } = useLanguage();
   const breakpoint = useBreakpoint({ ssr: false });
   const [imageIndex, setImageIndex] = useState(0);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const images = [Doutora, Doutor];
 
   useEffect(() => {

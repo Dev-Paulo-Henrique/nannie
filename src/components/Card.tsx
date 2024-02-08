@@ -22,6 +22,7 @@ export function Card() {
   //   const breakpoint = useBreakpoint({ ssr: false });
   const { flag, translations } = useLanguage();
   const [imageIndex, setImageIndex] = useState(0);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const images = [Doutora, Doutor];
 
   useEffect(() => {
