@@ -140,10 +140,12 @@ export function Form() {
               value={formik.values.city}
             >
               {City.getCitiesOfState(`${formik.values.country}`, `${formik.values.state}`).map((city, index) => (
+                <option key={index} value={city.name}>
+                  TESTE
+                </option>
                 // <option key={index} value={city.name}>
                 //   {city.name}
                 // </option>
-                <></>
               ))}
             </Select>}
           </FormControl>
