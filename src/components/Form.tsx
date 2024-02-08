@@ -11,9 +11,7 @@ import {
 import { useFormik } from "formik";
 // import Geonames from "geonames.js";
 import { useLanguage } from "../context/LanguageContext";
-import { Country, State
-  // , City
- } from "country-state-city";
+import { Country, State, City } from "country-state-city";
 
 export function Form() {
   const countries = Country.getAllCountries();
@@ -141,11 +139,12 @@ export function Form() {
               onChange={formik.handleChange}
               value={formik.values.city}
             >
-              {/* {City.getCitiesOfState(`${formik.values.country}`, `${formik.values.state}`).map((city, index) => (
-                <option key={index} value={city.name}>
-                  {city.name}
-                </option>
-              ))} */}
+              {City.getCitiesOfState(`${formik.values.country}`, `${formik.values.state}`).map((city, index) => (
+                // <option key={index} value={city.name}>
+                //   {city.name}
+                // </option>
+                <></>
+              ))}
             </Select>}
           </FormControl>
           <FormControl isRequired>
