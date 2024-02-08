@@ -11,9 +11,7 @@ import {
 import { useFormik } from "formik";
 // import Geonames from "geonames.js";
 import { useLanguage } from "../context/LanguageContext";
-import { Country, State
-  // , City
- } from "country-state-city";
+import { Country, State, City } from "country-state-city";
 
 export function Form() {
   const countries = Country.getAllCountries();
@@ -22,7 +20,7 @@ export function Form() {
       name: "",
       country: "",
       state: "",
-      // city: "",
+      city: "",
       option: "",
     },
     onSubmit: (values) => {
@@ -130,7 +128,7 @@ export function Form() {
                 </option>
               ))}
             </Select>}
-            {/* {formik.values.state && <Select
+            {formik.values.state && <Select
               mt={3}
               placeholder={
                 translations[flag ? "pt" : "en"]["home"]["form"]["city"]
@@ -146,7 +144,7 @@ export function Form() {
                   {city.name}
                 </option>
               ))}
-            </Select>} */}
+            </Select>}
           </FormControl>
           <FormControl isRequired>
             <FormLabel color="#09B3CD" fontWeight="regular" fontSize={20}>
