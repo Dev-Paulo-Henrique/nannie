@@ -38,8 +38,9 @@ for (const state of CityCode) {
     break;
   }
 }
-  
-  const filteredCities = Cities.filter(
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const cidade: any = Cities
+  const filteredCities = cidade.filter(
     (city: { country: string; admin1: string; }) =>
       city.country === formik.values.country &&
       city.admin1 === stateCode?.split(".")[1]
@@ -173,7 +174,7 @@ for (const state of CityCode) {
                   {city.name}
                 </option>
               ))} */}
-                {filteredCities.map((city, index) => (
+                {filteredCities.map((city: { name: string }, index: number) => (
                   <option key={index} value={city?.name}>
                     {city?.name}
                   </option>
