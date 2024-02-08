@@ -28,8 +28,13 @@ export function Form() {
     },
   });
 
-  const { flag, translations } = useLanguage();
+  const filteredCities = City.getAllCities().filter(
+    (city) =>
+      city.countryCode === formik.values.country &&
+      city.stateCode === formik.values.state
+  );
 
+  const { flag, translations } = useLanguage();
 
   return (
     <Flex
@@ -97,8 +102,8 @@ export function Form() {
               name="country"
               onChange={(e) => {
                 formik.handleChange(e);
-                formik.setFieldValue('state', '');
-                formik.setFieldValue('city', '');
+                formik.setFieldValue("state", "");
+                formik.setFieldValue("city", "");
               }}
               value={formik.values.country}
             >
@@ -108,43 +113,54 @@ export function Form() {
                 </option>
               ))}
             </Select>
-            {formik.values.country && <Select
-              mt={3}
-              placeholder={
-                translations[flag ? "pt" : "en"]["home"]["form"]["state"]
-              }
-              color="gray.500"
-              id="state"
-              name="state"
-              onChange={(e) => {
-                formik.handleChange(e);
-                formik.setFieldValue('city', '');
-              }}
-              value={formik.values.state}
-            >
-              {State.getStatesOfCountry(`${formik.values.country}`).map((state, index) => (
-                <option key={index} value={state.isoCode}>
-                  {state.name}
+            {formik.values.country && (
+              <Select
+                mt={3}
+                placeholder={
+                  translations[flag ? "pt" : "en"]["home"]["form"]["state"]
+                }
+                color="gray.500"
+                id="state"
+                name="state"
+                onChange={(e) => {
+                  formik.handleChange(e);
+                  formik.setFieldValue("city", "");
+                }}
+                value={formik.values.state}
+              >
+                {State.getStatesOfCountry(`${formik.values.country}`).map(
+                  (state, index) => (
+                    <option key={index} value={state.isoCode}>
+                      {state.name}
+                    </option>
+                  )
+                )}
+              </Select>
+            )}
+            {formik.values.state && (
+              <Select
+                mt={3}
+                placeholder={
+                  translations[flag ? "pt" : "en"]["home"]["form"]["city"]
+                }
+                color="gray.500"
+                id="city"
+                name="city"
+                onChange={formik.handleChange}
+                value={formik.values.city}
+              >
+                {/* {City.getCitiesOfState(`${formik.values.country}`, `${formik.values.state}`).map((city, index) => (
+                <option key={index} value={city.name}>
+                  {city.name}
                 </option>
-              ))}
-            </Select>}
-            {formik.values.state && <Select
-              mt={3}
-              placeholder={
-                translations[flag ? "pt" : "en"]["home"]["form"]["city"]
-              }
-              color="gray.500"
-              id="city"
-              name="city"
-              onChange={formik.handleChange}
-              value={formik.values.city}
-            >
-              {City.getCitiesOfState(`${formik.values.country}`, `${formik.values.state}`).map((city, index) => (
-                <option key={index} value={city?.name}>
-                  {city?.name}
-                </option>
-              ))}
-            </Select>}
+              ))} */}
+                {filteredCities.map((city, index) => (
+                  <option key={index} value={city.name}>
+                    {city.name}
+                  </option>
+                ))}
+              </Select>
+            )}
           </FormControl>
           <FormControl isRequired>
             <FormLabel color="#09B3CD" fontWeight="regular" fontSize={20}>
@@ -171,7 +187,13 @@ export function Form() {
             bg="#09B3CD"
             colorScheme="#0793A8"
             _hover={{ bg: "#0793A8", borderColor: "#0793A8" }}
-            isDisabled={!formik.values.country || !formik.values.state || !formik.values.city || !formik.values.name || !formik.values.option}
+            isDisabled={
+              !formik.values.country ||
+              !formik.values.state ||
+              !formik.values.city ||
+              !formik.values.name ||
+              !formik.values.option
+            }
             // isLoading={props.isSubmitting}
             type="submit"
           >
