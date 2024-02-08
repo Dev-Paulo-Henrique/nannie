@@ -11,7 +11,10 @@ import {
 import { useFormik } from "formik";
 // import Geonames from "geonames.js";
 import { useLanguage } from "../context/LanguageContext";
-import { Country, State, City } from "country-state-city";
+import { Country, State } from "country-state-city";
+import Cities from "cities.json";
+// import axios from 'axios'
+import CityCode from '../assets/cities.json'
 
 export function Form() {
   const countries = Country.getAllCountries();
@@ -28,11 +31,27 @@ export function Form() {
     },
   });
 
-  const filteredCities = City.getAllCities().filter(
-    (city) =>
-      city.countryCode === formik.values.country &&
-      city.stateCode === formik.values.state
-  );
+  let stateCode = "";
+for (const state of CityCode) {
+  if (state.name === formik.values.state) {
+    stateCode = state.code;
+    break;
+  }
+}
+  
+  const filteredCities = Cities.filter(
+    (city: { country: string; admin1: string; }) =>
+      city.country === formik.values.country &&
+      city.admin1 === stateCode?.split(".")[1]
+  ).sort((a: { name: number; }, b: { name: number; }) => {
+    if (a.name < b.name) {
+      return -1;
+    }
+    if (a.name > b.name) {
+      return 1;
+    }
+    return 0;
+  });
 
   const { flag, translations } = useLanguage();
 
@@ -130,7 +149,7 @@ export function Form() {
               >
                 {State.getStatesOfCountry(`${formik.values.country}`).map(
                   (state, index) => (
-                    <option key={index} value={state.isoCode}>
+                    <option key={index} value={state.name}>
                       {state.name}
                     </option>
                   )
@@ -155,8 +174,8 @@ export function Form() {
                 </option>
               ))} */}
                 {filteredCities.map((city, index) => (
-                  <option key={index} value={city.name}>
-                    {city.name}
+                  <option key={index} value={city?.name}>
+                    {city?.name}
                   </option>
                 ))}
               </Select>
