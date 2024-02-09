@@ -12,9 +12,9 @@ import { useFormik } from "formik";
 // import Geonames from "geonames.js";
 import { useLanguage } from "../context/LanguageContext";
 import { Country, State } from "country-state-city";
-import Cities from "cities.json";
+// import Cities from "cities.json";
 // import axios from 'axios'
-import CityCode from '../assets/cities.json'
+// import CityCode from '../assets/cities.json'
 
 export function Form() {
   const countries = Country.getAllCountries();
@@ -23,7 +23,7 @@ export function Form() {
       name: "",
       country: "",
       state: "",
-      city: "",
+      // city: "",
       option: "",
     },
     onSubmit: (values) => {
@@ -31,28 +31,28 @@ export function Form() {
     },
   });
 
-  let stateCode = "";
-for (const state of CityCode) {
-  if (state.name === formik.values.state) {
-    stateCode = state.code;
-    break;
-  }
-}
+//   let stateCode = "";
+// for (const state of CityCode) {
+//   if (state.name === formik.values.state) {
+//     stateCode = state.code;
+//     break;
+//   }
+// }
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const cidade: any = Cities
-  const filteredCities = cidade.filter(
-    (city: { country: string; admin1: string; }) =>
-      city.country === formik.values.country &&
-      city.admin1 === stateCode?.split(".")[1]
-  ).sort((a: { name: number; }, b: { name: number; }) => {
-    if (a.name < b.name) {
-      return -1;
-    }
-    if (a.name > b.name) {
-      return 1;
-    }
-    return 0;
-  });
+// const cidade: any = Cities
+//   const filteredCities = cidade.filter(
+//     (city: { country: string; admin1: string; }) =>
+//       city.country === formik.values.country &&
+//       city.admin1 === stateCode?.split(".")[1]
+//   ).sort((a: { name: number; }, b: { name: number; }) => {
+//     if (a.name < b.name) {
+//       return -1;
+//     }
+//     if (a.name > b.name) {
+//       return 1;
+//     }
+//     return 0;
+//   });
 
   const { flag, translations } = useLanguage();
 
@@ -123,7 +123,7 @@ const cidade: any = Cities
               onChange={(e) => {
                 formik.handleChange(e);
                 formik.setFieldValue("state", "");
-                formik.setFieldValue("city", "");
+                // formik.setFieldValue("city", "");
               }}
               value={formik.values.country}
             >
@@ -133,7 +133,7 @@ const cidade: any = Cities
                 </option>
               ))}
             </Select>
-            {formik.values.country && (
+            {State.getStatesOfCountry(`${formik.values.country}`).length !== 0 && (
               <Select
                 mt={3}
                 placeholder={
@@ -144,7 +144,7 @@ const cidade: any = Cities
                 name="state"
                 onChange={(e) => {
                   formik.handleChange(e);
-                  formik.setFieldValue("city", "");
+                  // formik.setFieldValue("city", "");
                 }}
                 value={formik.values.state}
               >
@@ -157,7 +157,7 @@ const cidade: any = Cities
                 )}
               </Select>
             )}
-            {formik.values.state && (
+            {/* {formik.values.state && (
               <Select
                 mt={3}
                 placeholder={
@@ -168,19 +168,19 @@ const cidade: any = Cities
                 name="city"
                 onChange={formik.handleChange}
                 value={formik.values.city}
-              >
+              > */}
                 {/* {City.getCitiesOfState(`${formik.values.country}`, `${formik.values.state}`).map((city, index) => (
                 <option key={index} value={city.name}>
                   {city.name}
                 </option>
               ))} */}
-                {filteredCities.map((city: { name: string }, index: number) => (
+                {/* {filteredCities.map((city: { name: string }, index: number) => (
                   <option key={index} value={city?.name}>
                     {city?.name}
                   </option>
-                ))}
-              </Select>
-            )}
+                ))} */}
+              {/* </Select>
+            )} */}
           </FormControl>
           <FormControl isRequired>
             <FormLabel color="#09B3CD" fontWeight="regular" fontSize={20}>
@@ -210,7 +210,7 @@ const cidade: any = Cities
             isDisabled={
               !formik.values.country ||
               !formik.values.state ||
-              !formik.values.city ||
+              // !formik.values.city ||
               !formik.values.name ||
               !formik.values.option
             }
