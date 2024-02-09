@@ -196,10 +196,11 @@ export function Form() {
               onChange={formik.handleChange}
               value={formik.values.option}
             >
-              <option>Idosos</option>
-              <option>Paciente hospitalizado</option>
-              <option>Pós-operatório</option>
-              <option>PCDs</option>
+              <option>{translations[flag ? "pt" : "en"]["home"]["form"]["item1"]}</option>
+              <option>{translations[flag ? "pt" : "en"]["home"]["form"]["item2"]}</option>
+              <option>{translations[flag ? "pt" : "en"]["home"]["form"]["item3"]}</option>
+              <option>{translations[flag ? "pt" : "en"]["home"]["form"]["item4"]}</option>
+              <option>{translations[flag ? "pt" : "en"]["home"]["form"]["item5"]}</option>
             </Select>
           </FormControl>
           <Button

@@ -74,6 +74,11 @@ type LanguageContextType = {
             city: string;
             input3: string;
             placeholder3: string;
+            item1: string;
+            item2: string;
+            item3: string;
+            item4: string;
+            item5: string;
             button: string;
         }
       };
@@ -146,6 +151,11 @@ type LanguageContextType = {
             input3: string;
             placeholder3: string;
             button: string;
+            item1: string;
+            item2: string;
+            item3: string;
+            item4: string;
+            item5: string;
         }
       };
     };

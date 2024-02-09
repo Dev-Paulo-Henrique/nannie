@@ -28,8 +28,8 @@ function App() {
             <Header />
             <Main />
             <Care />
-            <Partners />
             <Section />
+            <Partners />
             <Accordion />
             <Form />
             <Footer />

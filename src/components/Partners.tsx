@@ -110,7 +110,7 @@ export function Partners() {
             // <Slider {...settingsMobile}>
             <Grid templateColumns="repeat(2, 1fr)" alignItems="center" gap={4}>
               <Center><Link href="https://www.tisaude.com" target="_blank"><Image maxW="100%" px={8} src={TiSaude} /></Link></Center>
-              <Center><Link href="https://www.grupodpsp.com.br" target="_blank"><Image maxW="100%" px={8} src={DPSP} /></Link></Center>
+              <Center><Link href="https://www.grupodpsp.com.br" target="_blank"><Image maxW="100%" px={14} src={DPSP} /></Link></Center>
               <Center><Link href="https://www.fecomercio-ce.com.br" target="_blank"><Image maxW="100%" px={8} src={Fecomercio} /></Link></Center>
               <Center><Link href="https://interne.com.br" target="_blank"><Image maxW="100%" px={8}  src={Interne} /></Link></Center>
             </Grid>
