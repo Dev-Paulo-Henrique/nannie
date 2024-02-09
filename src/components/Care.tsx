@@ -9,7 +9,7 @@ import {
   Image,
   useBreakpoint,
   Button,
-  // useBreakpointValue,
+  useBreakpointValue
 } from "@chakra-ui/react";
 import Waves from "../assets/svg/waves.svg";
 import Nivel from "../assets/svg/nivel.svg";
@@ -22,10 +22,10 @@ import { Card } from "./Card";
 import { useLanguage } from "../context/LanguageContext";
 
 export function Care() {
-  // const isWideVersion = useBreakpointValue({
-  //   base: false,
-  //   lg: true
-  // })
+  const isWideVersion = useBreakpointValue({
+    base: false,
+    lg: true
+  })
   const { flag, translations } = useLanguage();
   const breakpoint = useBreakpoint({ ssr: false });
   const [imageIndex, setImageIndex] = useState(0);
@@ -68,13 +68,13 @@ export function Care() {
           >
             {translations[flag ? "pt" : "en"]["home"]["care"]["title"]}
           </Heading>
-          <Center>
+          {!isWideVersion ? <Center>
             <Text
               as="b"
               color="gray.600"
               fontFamily="Archivo"
               letterSpacing={1}
-              textAlign={{ base: "center", md: "start" }}
+              textAlign="center"
               fontSize={{ base: 14, md: 21 }}
               display="flex"
               flexDirection="row"
@@ -82,6 +82,19 @@ export function Care() {
               {translations[flag ? "pt" : "en"]["home"]["care"]["subtitle"]}
             </Text>
           </Center>
+          :
+            <Text
+              as="b"
+              color="gray.600"
+              fontFamily="Archivo"
+              letterSpacing={1}
+              textAlign="start"
+              fontSize={{ base: 14, md: 21 }}
+              display="flex"
+              flexDirection="row"
+            >
+              {translations[flag ? "pt" : "en"]["home"]["care"]["subtitle"]}
+            </Text>}
           <Text
             color="gray.600"
             fontFamily="Archivo"
