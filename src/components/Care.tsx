@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 import {
   Flex,
   Heading,
@@ -19,7 +19,7 @@ import Doutor from "../assets/doutor.jpg";
 // import Agent from "../assets/enfermeira_angellus_rec-min-1024x733.jpg";
 import { Item } from "./Wrap";
 import { Card } from "./Card";
-import { useLanguage } from '../context/LanguageContext';
+import { useLanguage } from "../context/LanguageContext";
 
 export function Care() {
   // const isWideVersion = useBreakpointValue({
@@ -57,7 +57,7 @@ export function Care() {
         //   bgRepeat="no-repeat"
         //   bgPosition="bottom right"
       >
-        <Box w="md" mb={{ base: 5, md: 0 }} maxW={{md: "40%"}}>
+        <Box w="md" mb={{ base: 5, md: 0 }} maxW={{ md: "40%" }}>
           <Heading
             fontWeight="bold"
             fontSize={{ base: 30, md: 45 }}
@@ -68,19 +68,20 @@ export function Care() {
           >
             {translations[flag ? "pt" : "en"]["home"]["care"]["title"]}
           </Heading>
-          <Text
-            as="b"
-            color="gray.600"
-            fontFamily="Archivo"
-            letterSpacing={1}
-            mt={-2}
-            textAlign={{ base: "center", md: "start" }}
-            fontSize={{ base: 14, md: 21 }}
-            display="flex"
-            flexDirection="row"
-          >
-            {translations[flag ? "pt" : "en"]["home"]["care"]["subtitle"]}
-          </Text>
+          <Center>
+            <Text
+              as="b"
+              color="gray.600"
+              fontFamily="Archivo"
+              letterSpacing={1}
+              textAlign={{ base: "center", md: "start" }}
+              fontSize={{ base: 14, md: 21 }}
+              display="flex"
+              flexDirection="row"
+            >
+              {translations[flag ? "pt" : "en"]["home"]["care"]["subtitle"]}
+            </Text>
+          </Center>
           <Text
             color="gray.600"
             fontFamily="Archivo"
@@ -93,10 +94,18 @@ export function Care() {
             {translations[flag ? "pt" : "en"]["home"]["care"]["description"]}
           </Text>
           <Wrap justify="space-between">
-            <Item text={translations[flag ? "pt" : "en"]["home"]["care"]["item1"]} />
-            <Item text={translations[flag ? "pt" : "en"]["home"]["care"]["item2"]} />
-            <Item text={translations[flag ? "pt" : "en"]["home"]["care"]["item3"]} />
-            <Item text={translations[flag ? "pt" : "en"]["home"]["care"]["item4"]} />
+            <Item
+              text={translations[flag ? "pt" : "en"]["home"]["care"]["item1"]}
+            />
+            <Item
+              text={translations[flag ? "pt" : "en"]["home"]["care"]["item2"]}
+            />
+            <Item
+              text={translations[flag ? "pt" : "en"]["home"]["care"]["item3"]}
+            />
+            <Item
+              text={translations[flag ? "pt" : "en"]["home"]["care"]["item4"]}
+            />
           </Wrap>
           {breakpoint == "base" && (
             <Center
@@ -128,7 +137,11 @@ export function Care() {
                 fontWeight="bold"
                 // maxW={300}
               >
-                {translations[flag ? "pt" : "en"]["home"]["care"]["cardsubtitle"]}
+                {
+                  translations[flag ? "pt" : "en"]["home"]["care"][
+                    "cardsubtitle"
+                  ]
+                }
               </Text>
               <Button
                 mt={2}
