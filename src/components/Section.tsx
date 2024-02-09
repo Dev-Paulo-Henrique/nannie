@@ -65,7 +65,7 @@ export function Section() {
             fontFamily="Archivo"
             letterSpacing={1}
             textAlign="justify"
-            fontSize={{ base: 18, md: 20 }}
+            fontSize={{ base: 14, md: 18 }}
             borderLeftWidth={3}
             pl={6}
             borderLeftColor="#09B3CD"

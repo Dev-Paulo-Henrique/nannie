@@ -91,7 +91,7 @@ export function Partners() {
             fontFamily="Archivo"
             letterSpacing={1}
             textAlign="justify"
-            fontSize={{ base: 16, md: 20 }}
+            fontSize={{ base: 14, md: 18 }}
             mt={6}
             maxW={400}
           >
