@@ -8,15 +8,23 @@ import {
   Box,
   Heading,
 } from "@chakra-ui/react";
+import { useState } from 'react';
 import { useFormik } from "formik";
 // import Geonames from "geonames.js";
 import { useLanguage } from "../context/LanguageContext";
 import { Country, State } from "country-state-city";
+import Swal from 'sweetalert2'
 // import Cities from "cities.json";
 // import axios from 'axios'
 // import CityCode from '../assets/cities.json'
+// import { criarMailOptions } from './email';
+// import { sendEmail } from './sendEmail'
+
+// import nodeMailer from "nodemailer";
+
 
 export function Form() {
+  const [isLoading, setIsLoading] = useState(false);
   const countries = Country.getAllCountries();
   const formik = useFormik({
     initialValues: {
@@ -25,9 +33,40 @@ export function Form() {
       state: "",
       // city: "",
       option: "",
+      email: "",
     },
-    onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+    onSubmit: async (values) => {
+      setIsLoading(true);
+      try {
+        const response = await fetch("http://localhost:9000/send", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(values),
+        })
+        if (response.ok) {
+          Swal.fire({
+            title: "Email enviado com sucesso!",
+            icon: "success",
+            showConfirmButton: false,
+            timer: 2000
+          });
+          formik.resetForm();
+        } else {
+          Swal.fire({
+            title: "Erro ao enviar o email!",
+            icon: "error",
+            showConfirmButton: false,
+            timer: 2000
+          });
+        }
+      } catch (error) {
+        console.error("Erro ao enviar o email:", error);
+        alert("Erro ao enviar o email. Por favor, tente novamente mais tarde.");
+      } finally {
+        setIsLoading(false);
+      }
     },
   });
 
@@ -102,6 +141,27 @@ export function Form() {
               value={formik.values.name}
               id="name"
               name="name"
+            />
+          </FormControl>
+          <FormControl isRequired>
+            <FormLabel
+              color="#09B3CD"
+              fontWeight="regular"
+              fontSize={20}
+              htmlFor="email"
+            >
+              {translations[flag ? "pt" : "en"]["home"]["form"]["email"]}
+            </FormLabel>
+            <Input
+              placeholder={
+                translations[flag ? "pt" : "en"]["home"]["form"]["email"]
+              }
+              type="email"
+              color="gray.500"
+              onChange={formik.handleChange}
+              value={formik.values.email}
+              id="email"
+              name="email"
             />
           </FormControl>
           <FormControl isRequired>
@@ -208,6 +268,7 @@ export function Form() {
             bg="#09B3CD"
             colorScheme="#0793A8"
             _hover={{ bg: "#0793A8", borderColor: "#0793A8" }}
+            overflowY="hidden"
             isDisabled={
               !formik.values.country ||
               !formik.values.state ||
@@ -215,10 +276,10 @@ export function Form() {
               !formik.values.name ||
               !formik.values.option
             }
-            // isLoading={props.isSubmitting}
+            isLoading={isLoading}
             type="submit"
           >
-            {translations[flag ? "pt" : "en"]["home"]["form"]["button"]}
+            {!isLoading && translations[flag ? "pt" : "en"]["home"]["form"]["button"]}
           </Button>
         </form>
       </Box>

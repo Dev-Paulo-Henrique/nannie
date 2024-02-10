@@ -59,7 +59,8 @@
       "form": {
         "title": "Contato",
         "input1": "Como você se chama?",
-        "placeholder1": "Digite seu nome...",
+        "placeholder1": "Digite seu nome",
+        "email": "Digite seu e-mail",
         "input2": "De onde você é?",
         "country": "Selecione um país",
         "state": "Selecione um estado",
@@ -135,7 +136,8 @@
       "form": {
         "title": "Contact",
         "input1": "What is your name?",
-        "placeholder1": "Enter your name...",
+        "placeholder1": "Enter your name",
+        "email": "Enter your email",
         "input2": "Where are you from?",
         "country": "Select a country",
         "state": "Select a state",

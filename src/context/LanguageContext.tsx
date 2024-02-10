@@ -66,6 +66,7 @@ type LanguageContextType = {
         };
         form: {
             title: string;
+            email: string;
             input1: string;
             placeholder1: string;
             input2: string;
@@ -142,6 +143,7 @@ type LanguageContextType = {
         };
         form: {
             title: string;
+            email: string;
             input1: string;
             placeholder1: string;
             input2: string;
