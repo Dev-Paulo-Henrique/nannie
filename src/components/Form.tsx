@@ -24,6 +24,7 @@ import Swal from 'sweetalert2'
 
 
 export function Form() {
+  console.log(process.env.NANNIE_EMAIL_PASS)
   const [isLoading, setIsLoading] = useState(false);
   const countries = Country.getAllCountries();
   const formik = useFormik({
@@ -44,7 +45,7 @@ export function Form() {
             "Content-Type": "application/json",
           },
           body: JSON.stringify(values),
-        })
+        }) 
         if (response.ok) {
           Swal.fire({
             title: "Email enviado com sucesso!",
@@ -63,7 +64,12 @@ export function Form() {
         }
       } catch (error) {
         console.error("Erro ao enviar o email:", error);
-        alert("Erro ao enviar o email. Por favor, tente novamente mais tarde.");
+        Swal.fire({
+          title: "Erro ao enviar o email. Por favor, tente novamente mais tarde.",
+          icon: "error",
+          showConfirmButton: false,
+          timer: 2000
+        });
       } finally {
         setIsLoading(false);
       }
