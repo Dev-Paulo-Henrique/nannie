@@ -15,10 +15,6 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.get('/public', (req, res) => {
-  res.send("OK!")
-})
-
 app.post("/send", (req, res) => {
   const { name, email, country, state, option } = req.body;
   const output = `
@@ -37,8 +33,8 @@ app.post("/send", (req, res) => {
   });
 
   const mailOptions = {
-    from: `"${name} " <contato@nannie.com.br>`,
-    to: "contato@nannie.com.br",
+    from: `"${name} " <${process.env.NANNIE_EMAIL_AUTH}>`,
+    to: process.env.NANNIE_EMAIL_AUTH,
     subject: name,
     text: option,
     html: output,
