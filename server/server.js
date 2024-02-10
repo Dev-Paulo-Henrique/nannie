@@ -4,9 +4,9 @@ import nodemailer from "nodemailer";
 import cors from "cors";
 import { config } from 'dotenv';
 
-// if (process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV !== 'production') {
   config()
-// }
+}
 
 const app = express();
 
@@ -27,14 +27,14 @@ app.post("/send", (req, res) => {
     port: 465,
     secure: true,
     auth: {
-      user: process.env.NANNIE_EMAIL_AUTH,
-      pass: process.env.NANNIE_EMAIL_PASS,
+      user: "contato@nannie.com.br",
+      pass: "#N4nni3.",
     }
   });
 
   const mailOptions = {
-    from: `"${name} " <${process.env.NANNIE_EMAIL_AUTH}>`,
-    to: process.env.NANNIE_EMAIL_AUTH,
+    from: `"${name} " <contato@nannie.com.br>`,
+    to: "contato@nannie.com.br",
     subject: name,
     text: option,
     html: output,
