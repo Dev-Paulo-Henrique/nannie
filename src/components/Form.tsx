@@ -24,7 +24,6 @@ import Swal from 'sweetalert2'
 
 
 export function Form() {
-  console.log(process.env.NANNIE_EMAIL_PASS)
   const [isLoading, setIsLoading] = useState(false);
   const countries = Country.getAllCountries();
   const formik = useFormik({

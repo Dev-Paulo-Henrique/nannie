@@ -22,8 +22,8 @@ app.post("/send", (req, res) => {
     port: 465,
     secure: true,
     auth: {
-      user: process.env.NANNIE_EMAIL_AUTH,
-      pass: process.env.NANNIE_EMAIL_PASS,
+      user: 'contato@nannie.com.br',
+      pass: "#N4nni3.",
     }
   });
 
