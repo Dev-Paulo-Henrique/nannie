@@ -2,6 +2,11 @@ import express from "express";
 import bodyParser from "body-parser";
 import nodemailer from "nodemailer";
 import cors from "cors";
+import { config } from 'dotenv';
+
+if (process.env.NODE_ENV !== 'production') {
+  config()
+}
 
 const app = express();
 
@@ -26,8 +31,8 @@ app.post("/send", (req, res) => {
     port: 465,
     secure: true,
     auth: {
-      user: '',
-      pass: "",
+      user: process.env.NANNIE_EMAIL_AUTH,
+      pass: process.env.NANNIE_EMAIL_PASS,
     }
   });
 
