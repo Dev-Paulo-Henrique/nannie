@@ -10,6 +10,10 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+app.get('/public', (req, res) => {
+  res.send("OK!")
+})
+
 app.post("/send", (req, res) => {
   const { name, email, country, state, option } = req.body;
   const output = `
@@ -22,8 +26,8 @@ app.post("/send", (req, res) => {
     port: 465,
     secure: true,
     auth: {
-      user: 'contato@nannie.com.br',
-      pass: "#N4nni3.",
+      user: '',
+      pass: "",
     }
   });
 
