@@ -38,7 +38,7 @@ export function Form() {
     onSubmit: async (values) => {
       setIsLoading(true);
       try {
-        const response = await fetch("http://localhost:9000/send", {
+        const response = await fetch("https://nannie.com.br:9000/send", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
