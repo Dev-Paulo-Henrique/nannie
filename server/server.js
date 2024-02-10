@@ -49,4 +49,4 @@ app.post("/send", (req, res) => {
   });
 });
 
-app.listen(9000, () => console.log("Servidor ativo..."));
+app.listen(5173, () => console.log("Servidor ativo..."));
