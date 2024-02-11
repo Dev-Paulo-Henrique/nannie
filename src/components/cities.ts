@@ -1,3 +1,3 @@
 import cities from '../assets/cities.json'
 
-export const Cities: { code: string; name: string }[] = cities;
+export const CityCode: { code: string; name: string }[] = cities;
