@@ -38,7 +38,7 @@ export function Form() {
     onSubmit: async (values) => {
       setIsLoading(true);
       try {
-        const response = await fetch(`${process.env.VERCEL_URL}/send`, {
+        const response = await fetch('https://hzpjfk-9001.csb.app/send', {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
