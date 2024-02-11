@@ -19,7 +19,7 @@ import Cities from 'cities.json';
 interface City {
   lng: string;
   lat: string;
-  name: number;
+  name: string;
   country: string;
   admin1: string;
   admin2: string;
