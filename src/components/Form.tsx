@@ -17,8 +17,8 @@ import { CityCode } from "./cities";
 import Cities from 'cities.json';
 
 interface City {
-  lng: number;
-  lat: number;
+  lng: string;
+  lat: string;
   name: number;
   country: string;
   admin1: string;
