@@ -17,9 +17,12 @@ import { CityCode } from "./cities";
 import Cities from 'cities.json';
 
 interface City {
+  lng: number;
+  lat: number;
   name: number;
   country: string;
   admin1: string;
+  admin2: string;
 }
 
 export function Form() {
@@ -86,7 +89,16 @@ export function Form() {
 
 const cidades: City[] = Cities as City[]
 
-  const filteredCities = cidades
+const cities: City[] = cidades.map(city => ({
+  name: city.name,
+  lat: city.lat,
+  lng: city.lng,
+  country: city.country,
+  admin1: city.admin1,
+  admin2: city.admin1
+}));
+
+  const filteredCities = cities
     .filter(
       (city: City) =>
         city.country === formik.values.country &&
