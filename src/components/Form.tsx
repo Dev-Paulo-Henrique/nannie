@@ -8,22 +8,11 @@ import {
   Box,
   Heading,
 } from "@chakra-ui/react";
-import { useState } from "react";
+import { useState } from 'react';
 import { useFormik } from "formik";
 import { useLanguage } from "../context/LanguageContext";
 import { Country, State } from "country-state-city";
-import Swal from "sweetalert2";
-import { CityCode } from "./cities";
-import Cities from 'cities.json';
-
-interface City {
-  lng: string;
-  lat: string;
-  name: string;
-  country: string;
-  admin1: string;
-  admin2: string;
-}
+import Swal from 'sweetalert2'
 
 export function Form() {
   const [isLoading, setIsLoading] = useState(false);
@@ -33,26 +22,26 @@ export function Form() {
       name: "",
       country: "",
       state: "",
-      city: "",
+      // city: "",
       option: "",
       email: "",
     },
     onSubmit: async (values) => {
       setIsLoading(true);
       try {
-        const response = await fetch("https://hzpjfk-9001.csb.app/send", {
+        const response = await fetch('https://hzpjfk-9001.csb.app/send', {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
           body: JSON.stringify(values),
-        });
+        }) 
         if (response.ok) {
           Swal.fire({
             title: "Email enviado com sucesso!",
             icon: "success",
             showConfirmButton: false,
-            timer: 2000,
+            timer: 2000
           });
           formik.resetForm();
         } else {
@@ -60,17 +49,16 @@ export function Form() {
             title: "Erro ao enviar o email!",
             icon: "error",
             showConfirmButton: false,
-            timer: 2000,
+            timer: 2000
           });
         }
       } catch (error) {
         console.error("Erro ao enviar o email:", error);
         Swal.fire({
-          title:
-            "Erro ao enviar o email. Por favor, tente novamente mais tarde.",
+          title: "Erro ao enviar o email. Por favor, tente novamente mais tarde.",
           icon: "error",
           showConfirmButton: false,
-          timer: 2000,
+          timer: 2000
         });
       } finally {
         setIsLoading(false);
@@ -78,34 +66,28 @@ export function Form() {
     },
   });
 
-  let stateCode = "";
-  for (const state of CityCode) {
-    if (state.name === formik.values.state) {
-      stateCode = state.code;
-      break;
-    }
-  }
-// console.log(Cities)
-
-const cidades: City[] = Cities as City[]
-
-const cities: City[] = cidades as unknown as City[];
-
-  const filteredCities = cities
-    .filter(
-      (city: City) =>
-        city.country === formik.values.country &&
-        city.admin1 === stateCode?.split(".")[1]
-    )
-    .sort((a: City, b: City) => {
-      if (a.name < b.name) {
-        return -1;
-      }
-      if (a.name > b.name) {
-        return 1;
-      }
-      return 0;
-    });
+//   let stateCode = "";
+// for (const state of CityCode) {
+//   if (state.name === formik.values.state) {
+//     stateCode = state.code;
+//     break;
+//   }
+// }
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+// const cidade: any = Cities
+//   const filteredCities = cidade.filter(
+//     (city: { country: string; admin1: string; }) =>
+//       city.country === formik.values.country &&
+//       city.admin1 === stateCode?.split(".")[1]
+//   ).sort((a: { name: number; }, b: { name: number; }) => {
+//     if (a.name < b.name) {
+//       return -1;
+//     }
+//     if (a.name > b.name) {
+//       return 1;
+//     }
+//     return 0;
+//   });
 
   const { flag, translations } = useLanguage();
 
@@ -207,8 +189,7 @@ const cities: City[] = cidades as unknown as City[];
                 </option>
               ))}
             </Select>
-            {State.getStatesOfCountry(`${formik.values.country}`).length !==
-              0 && (
+            {State.getStatesOfCountry(`${formik.values.country}`).length !== 0 && (
               <Select
                 mt={3}
                 placeholder={
@@ -219,7 +200,7 @@ const cities: City[] = cidades as unknown as City[];
                 name="state"
                 onChange={(e) => {
                   formik.handleChange(e);
-                  formik.setFieldValue("city", "");
+                  // formik.setFieldValue("city", "");
                 }}
                 value={formik.values.state}
               >
@@ -232,7 +213,7 @@ const cities: City[] = cidades as unknown as City[];
                 )}
               </Select>
             )}
-            {formik.values.state && (
+            {/* {formik.values.state && (
               <Select
                 mt={3}
                 placeholder={
@@ -243,19 +224,19 @@ const cities: City[] = cidades as unknown as City[];
                 name="city"
                 onChange={formik.handleChange}
                 value={formik.values.city}
-              >
-            {/* {City.getCitiesOfState(`${formik.values.country}`, `${formik.values.state}`).map((city, index) => (
+              > */}
+                {/* {City.getCitiesOfState(`${formik.values.country}`, `${formik.values.state}`).map((city, index) => (
                 <option key={index} value={city.name}>
                   {city.name}
                 </option>
               ))} */}
-            {filteredCities.map((city: City, index: number) => (
+                {/* {filteredCities.map((city: { name: string }, index: number) => (
                   <option key={index} value={city?.name}>
                     {city?.name}
                   </option>
-                ))}
-            </Select>
-            )}
+                ))} */}
+              {/* </Select>
+            )} */}
           </FormControl>
           <FormControl isRequired>
             <FormLabel color="#09B3CD" fontWeight="regular" fontSize={20}>
@@ -271,21 +252,11 @@ const cities: City[] = cidades as unknown as City[];
               onChange={formik.handleChange}
               value={formik.values.option}
             >
-              <option>
-                {translations[flag ? "pt" : "en"]["home"]["form"]["item1"]}
-              </option>
-              <option>
-                {translations[flag ? "pt" : "en"]["home"]["form"]["item2"]}
-              </option>
-              <option>
-                {translations[flag ? "pt" : "en"]["home"]["form"]["item3"]}
-              </option>
-              <option>
-                {translations[flag ? "pt" : "en"]["home"]["form"]["item4"]}
-              </option>
-              <option>
-                {translations[flag ? "pt" : "en"]["home"]["form"]["item5"]}
-              </option>
+              <option>{translations[flag ? "pt" : "en"]["home"]["form"]["item1"]}</option>
+              <option>{translations[flag ? "pt" : "en"]["home"]["form"]["item2"]}</option>
+              <option>{translations[flag ? "pt" : "en"]["home"]["form"]["item3"]}</option>
+              <option>{translations[flag ? "pt" : "en"]["home"]["form"]["item4"]}</option>
+              <option>{translations[flag ? "pt" : "en"]["home"]["form"]["item5"]}</option>
             </Select>
           </FormControl>
           <Button
@@ -304,8 +275,7 @@ const cities: City[] = cidades as unknown as City[];
             isLoading={isLoading}
             type="submit"
           >
-            {!isLoading &&
-              translations[flag ? "pt" : "en"]["home"]["form"]["button"]}
+            {!isLoading && translations[flag ? "pt" : "en"]["home"]["form"]["button"]}
           </Button>
         </form>
       </Box>
