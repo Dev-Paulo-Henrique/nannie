@@ -89,14 +89,7 @@ export function Form() {
 
 const cidades: City[] = Cities as City[]
 
-const cities: City[] = cidades.map(city => ({
-  name: city.name,
-  lat: city.lat,
-  lng: city.lng,
-  country: city.country,
-  admin1: city.admin1,
-  admin2: city.admin1
-}));
+const cities: City[] = cidades as unknown as City[];
 
   const filteredCities = cities
     .filter(
