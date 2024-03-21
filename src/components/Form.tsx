@@ -29,7 +29,7 @@ export function Form() {
     onSubmit: async (values) => {
       setIsLoading(true);
       try {
-        const response = await fetch('https://6jjnt7-8080.csb.app/send', {
+        const response = await fetch('https://bloom-ablaze-thistle.glitch.me/send', {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
